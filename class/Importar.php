@@ -1,6 +1,6 @@
 <?php
 
-require_once "Conexion.php";
+require_once "autoloader.php";
 
 class Importar extends Conexion
 {
@@ -12,16 +12,15 @@ class Importar extends Conexion
 
 
 
-   public function importarEmpresa($fileSeries)
+   public function importarEmpresa($fileEmpresa)
     {
         $conn = $this->connect();
-        if (($handle = fopen($fileSeries, "r")) !== false) {
+        if (($handle = fopen($fileEmpresa, "r")) !== false) {
             while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-                $id = $data[0];
-                $tema = $data[1];
-                $nombre = $data[2];
-                $sedes = $data[3];
-            
+               
+                $tema= $data[0];
+                $nombre = $data[1];
+                $sedes = $data[2];
 
 
                 $sql = "INSERT INTO empresas (tema, nombre, sedes) VALUES ('$tema', '$nombre', '$sedes')";

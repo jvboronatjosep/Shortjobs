@@ -1,9 +1,9 @@
 <?php
 
-require_once 'autoload.php'; 
+require_once 'autoloader.php'; 
 
 $confFile = "./conf.csv";
-$importSerie = "empresas.csv";
-$importador = new Importar($confFile); 
-$importador->importarEmpresa($importSerie);
+$importEmpresa = "empresas.csv";
+$importador = new Importar ($confFile); 
+$importador->importarEmpresa($importEmpresa);
 header('Location: ./Inicio.php');
