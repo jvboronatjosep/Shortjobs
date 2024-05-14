@@ -57,6 +57,32 @@ class Importar extends Conexion
         }
         return "File imported successfully";
     }
+
+    public function importarTrabajos($fileTrabajos)
+    {
+        $conn = $this->connect();
+        if (($handle = fopen($fileTrabajos, "r")) !== false) {
+            while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+                $tipo = $data[0];
+                $empresa = $data[1];
+                $descripcion = $data[2];
+                $ubicacion = $data[3];
+                $fecha = $data[4];
+                $salario = $data[5];
+                $duracion = $data[6];
+
+
+                $sql = "INSERT INTO trabajos (tipo, empresa, descripcion, ubicacion, fecha, salario, duracion) VALUES ('$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha','$salario', '$duracion')";
+                if (!$conn->query($sql)) {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+            }
+            fclose($handle);
+        } else {
+            return "Error opening file";
+        }
+        return "File imported successfully";
+    }
 }
 
 ?>
