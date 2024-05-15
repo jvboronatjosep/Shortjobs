@@ -63,16 +63,17 @@ class Importar extends Conexion
         $conn = $this->connect();
         if (($handle = fopen($fileTrabajos, "r")) !== false) {
             while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-                $tipo = $data[0];
-                $empresa = $data[1];
-                $descripcion = $data[2];
-                $ubicacion = $data[3];
-                $fecha = $data[4];
-                $salario = $data[5];
-                $duracion = $data[6];
+                $nombre = $data[0];
+                $tipo = $data[1];
+                $empresa = $data[2];
+                $descripcion = $data[3];
+                $ubicacion = $data[4];
+                $fecha = $data[5];
+                $salario = $data[6];
+                $duracion = $data[7];
 
 
-                $sql = "INSERT INTO trabajos (tipo, empresa, descripcion, ubicacion, fecha, salario, duracion) VALUES ('$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha','$salario', '$duracion')";
+                $sql = "INSERT INTO trabajos (nombre,tipo, empresa,descripcion, ubicacion, fecha, salario, duracion) VALUES ('$nombre','$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha','$salario', '$duracion')";
                 if (!$conn->query($sql)) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

@@ -30,6 +30,7 @@ create table empresas(
 drop table if exists trabajos;
 create table trabajos(
 	id int primary key auto_increment,
+     nombre varchar (100),
     tipo varchar(50),
     empresa varchar (50),
     descripcion varchar (255),

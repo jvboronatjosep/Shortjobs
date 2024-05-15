@@ -13,11 +13,11 @@
 </head>
 <header>
     <div class="logo">
-        <a href="Inicio.html"><img src="img/LogoShortJobs.png" alt=""></a>
+        <a href="Inicio.php"><img src="img/LogoShortJobs.png" alt=""></a>
     </div>
     <nav class="botones">
         <a class="boton" href="Inicio.html">Inicio</a>
-        <a class="boton" href="Trabajos.html">Trabajos</a>
+        <a class="boton" href="Trabajos.php">Trabajos</a>
         <a class="boton" href="Calendario.html">Calendario</a>
         <a class="boton" href="Destacadas.html">Destacadas</a>
         <a class="boton" href="Contacto.html">Contacto</a>

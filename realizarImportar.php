@@ -7,7 +7,7 @@ $importEmpresa = "empresas.csv";
 $importUsuarios = "usuarios.csv";
 $importTrabajos = "trabajos.csv";
 $importador = new Importar($confFile); 
-$importadorEmpresa->importarEmpresa($importEmpresa);
-$importadorUsuriaos->importarUsuarios($importUsuarios);
-$importadorTrabajos->importarTrabajos($importTrabajos); // Corrección aquí
+$importador->importarEmpresa($importEmpresa);
+$importador->importarUsuarios($importUsuarios);
+$importador->importarTrabajos($importTrabajos); 
 header('Location: ./Inicio.php');
