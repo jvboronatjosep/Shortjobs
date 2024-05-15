@@ -15,6 +15,144 @@ $brandsObtained = $gestion->getTrabajos();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c154837196.js" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+    font-family: Florida-font;
+    src: url(NavineDemo-SemiCondensed.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 120px;
+    background-color: #788BFF;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 30px;
+    height: 100px;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFE600;
+}
+
+.header-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header-buttons a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: #788BFF;
+}
+
+.header-buttons a:hover {
+    background-color: #FFE600;
+    color: black;
+}
+
+.carousel-image {
+    height: 900px;
+    object-fit: cover;
+}
+
+#enviar {
+    font-family: Verdana, Helvetica;
+    background-color: #788BFF;
+    font-size: 12pt;
+    width: 500px;
+    color: white;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 25px;
+}
+
+#enviar:hover {
+    background-color: #6B7AFF;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #788BFF;
+    color: white;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 4096px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .Caja figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .Caja figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .Caja h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: Florida-font;
+}
+
+.pie-pagina .grupo-1 .Caja p {
+    margin-bottom: 10px;
+    font-family: Florida-font;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #535252;
+    text-align: center;
+    transition:
+}
+    </style>
 </head>
 <header>
     <div class="logo">
@@ -28,28 +166,21 @@ $brandsObtained = $gestion->getTrabajos();
         <a class="boton" href="Contacto.html">Contacto</a>
     </nav>
     <div class="header-buttons">
-        <a href="#">Iniciar Sesión</a>
-        <a href="#">Registro</a>
+        <a href="#" style="color: black;">Iniciar Sesión</a>
+        <a href="#" style="color: black;">Registro</a>
     </div>
 </header>
 
 
 <body>
-    <div class="container">
-        <h2>A TU ALCANCE</h2>
-        <h1>Encuentra trabajos cortos</h1>
-        <p>¡Encuentra trabajos temporales de forma rápida y segura con ShortJobs! Conectamos a 
-        empresas con necesidades de personal temporal y a trabajadores disponibles para hacer trabajos por horas o días. 
-        ¡Es la solución perfecta para cubrir tus necesidades laborales de manera flexible y conveniente!</p>
+    <div class="container-fluid">
+       
         <div class="row">
             <?php
               $gestion->drawTrabajos($brandsObtained);
             ?>
         </div>
-        
-        <form action="">
-            <input type="submit" value="descubrelo" id="enviar">
-        </form>
+      
     </div>
 </body>
 
@@ -71,7 +202,7 @@ $brandsObtained = $gestion->getTrabajos();
                     <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md">
                 <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
             </div>
         </div>
