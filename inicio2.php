@@ -11,29 +11,29 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top mt-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="ml-4" style="height: 50px; width: 80px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white active" href="index.html">Inicio </a>
+                        <a class="nav-link text-white active" href="index.html" style="margin-right: 15px;">Inicio </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link text-white" href="temporadas.html">Trabajos</a>
+                        <a class="nav-link text-white" href="temporadas.html" style="margin-right: 15px;">Trabajos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="index.html">Calendario</a>
+                        <a class="nav-link text-white" href="index.html" style="margin-right: 15px;">Calendario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="temporadas.html">Contacto</a>
+                        <a class="nav-link text-white" href="temporadas.html" style="margin-right: 30px;">Contacto</a>
                     </li>
                 </ul>
 
                 <div class="header-buttons">
-                    <a href="Empresa-Usuario.php" class="btn btn-primary">Iniciar Sesión</a>
-                    <a href="Empresa-Usuario.php" class="btn btn-primary">Registro</a>
+                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg btn-block" style="margin-right: 20px;">Iniciar Sesión</a>
+                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg btn-block" style="margin-right: 60px;">Registro</a>
                 </div>
             </div>
         </div>
