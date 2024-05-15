@@ -14,6 +14,22 @@ body{
     background-color: black;
 }
 
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.nav-link {
+    font-size: 18px;
+}
+
+.carousel-image {
+    height: 900px;
+    object-fit: cover; 
+}
+
 /* Encabezado */
 
 header{
@@ -232,3 +248,4 @@ nav a:hover{
 .Caja .Medio{
     margin-left: 100px;
 }
+
