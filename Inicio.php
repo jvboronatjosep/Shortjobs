@@ -69,18 +69,29 @@
         </button>
     </div>
 
-    <div class="container mt-5">
-        <h2>A TU ALCANCE</h2>
-        <h1>Encuentra trabajos cortos</h1>
-        <p>¡Encuentra trabajos temporales de forma rápida y segura con ShortJobs! Conectamos a 
-        empresas con necesidades de personal temporal y a trabajadores disponibles para hacer trabajos por horas o días. 
-        ¡Es la solución perfecta para cubrir tus necesidades laborales de manera flexible y conveniente!</p>
-        
-        <form action="">
-            <input type="submit" value="descubrelo" id="enviar">
-        </form>
+
+
+<div class="container-fluid py-5 d-flex justify-content-center align-items-center text-dark bg-light" style="height: 600px;">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <h3 class="fw-bold" style="font-size: 65px;">Empresa especializada <br> en unir talento <br> temporal con <br> trabajos flexibles</h3>
+        </div>
+        <div class="col-sm-6 text-start align-self-center">
+            <h5 class="text-justify" style="font-size: 30px;">Ofrecemos soluciones completas para trabajadores temporales y empresas, desde selección de talento hasta gestión de proyectos, adaptándonos al mercado laboral cambiante para garantizar el éxito. <br> <br><a href="">Leer más</a></h5>
+        </div>
     </div>
+</div>
+
+
+
+
+
+    
+
 </body>
+
+
+
 <div class="contacto"><footer class="pie-pagina">
     <div class="grupo-1">
         <div class="Caja">
