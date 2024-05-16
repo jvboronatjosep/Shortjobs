@@ -33,4 +33,20 @@
     margin-right: 5px; 
     }
 
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    
+    .carousel-inner {
+      height: 100vh;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      height: 1100px;
+  }
+
   
