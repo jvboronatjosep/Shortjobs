@@ -1,4 +1,56 @@
-@font-face {
+
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  body {
+    font-family: Helvetica, Arial, sans-serif; 
+    background-color: white; 
+    color: black; 
+}
+  
+  .nav-link {
+    font-size: 18px;
+  }
+    
+  .carousel-image {
+    height: 900px;
+    object-fit: cover; 
+  }
+  
+    .header-buttons {
+    display: flex;
+    align-items: center; 
+    }
+    
+    .header-buttons a.btn {
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-right: 5px; 
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    
+    .carousel-inner {
+      height: 100vh;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      height: 1100px;
+  }
+
+  
+  @font-face {
     font-family: Florida-font;
     src: url(NavineDemo-SemiCondensed.ttf);
 }
@@ -10,60 +62,23 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
 
-
-.container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-
-.nav-link {
-    font-size: 18px;
-}
-
-.carousel-image {
-    height: 900px;
-    object-fit: cover; 
-}
 
 /* Encabezado */
 
-header{
-    display: flex;
-    justify-content: space-between;
-    min-height: 120px;
-    background-color: black;
-    align-items: center;
-    padding: 10px;
-}
+
 
 .logo{
     display: flex;
     align-items: center;
 }
 
-.header-buttons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-.header-buttons a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border: 1px solid black;
-    border-radius: 30px;
-    background-color: yellow;
-}
 
 #enviar{
     font-family:Verdana,Helvetica;
-    background-color: yellow;
     font-size:12pt;
     width: 500px;
     color:#696969;
@@ -79,25 +94,10 @@ header{
     height: 100px;
 }
 
-nav a{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 25px;
+.nav-item {
+  color: yellow;
 }
 
-nav a:hover{
-    color:yellow;
-}
-
-.boton{
-    text-decoration: none; 
-    padding: 10px;
-    color: white;
-    font-family: Florida-font;
-}
-.botones{
-    margin-right: 50px;
-}
 
 
 /* Botones */
@@ -166,6 +166,10 @@ nav a:hover{
     transform: none;
 }
 
+#enviar:hover {
+  background-color: lightblue;
+  color: white;
+}
 
 
 
