@@ -16,7 +16,13 @@ CREATE TABLE usuarios (
     correoElectronico VARCHAR(30),
     nombreUsuario VARCHAR(50),
     contraseña VARCHAR(100) 
-);
+    `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `userPassword` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `securePassword` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `userName` (`userName`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 drop table if exists empresas;
@@ -25,7 +31,13 @@ create table empresas(
     tema varchar (100),
     nombre varchar (50),
     sedes varchar (255)
-);
+        `empresaId` int(11) NOT NULL AUTO_INCREMENT,
+  `empresaName` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `empresaPassword` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `securePassword` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`empresaId`),
+  UNIQUE KEY `empresaName` (`empresaName`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 drop table if exists trabajos;
 create table trabajos(
@@ -40,15 +52,7 @@ create table trabajos(
 );
 
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `userId` int(11) NOT NULL AUTO_INCREMENT,
-  `userName` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `userPassword` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `securePassword` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`userId`),
-  UNIQUE KEY `userName` (`userName`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `securePassword`) VALUES
