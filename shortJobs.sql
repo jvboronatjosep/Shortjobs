@@ -55,7 +55,7 @@ create table trabajos(
 
 
 
-INSERT INTO `users` (`userId`, `userName`, `userPassword`, `securePassword`) VALUES
+INSERT INTO `empresas` (`empresaId`, `empresaName`, `empresaPassword`, `securePassword`) VALUES
 (1, 'TerraNova', '1234', '$2y$10$L8H6tTdwYbrxE32W3oOg/.u/wy9rcxFOryh3Z92LLd6UtN1fZ8Ad.');
 COMMIT;
 
