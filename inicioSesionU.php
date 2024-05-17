@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión Usuario - ShortJobs</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .login-container {
             margin-top: 100px;
@@ -19,13 +22,6 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .form-footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .form-footer a {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -37,17 +33,17 @@
                         <h2>Inicio de Sesión para Usuarios</h2>
                         <p>Bienvenido a ShortJobs</p>
                     </div>
-                    <form>
+                    <form action="procesarLogin.php" method="POST">
                         <div class="form-group">
                             <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
+                            <input type="userName" class="form-control" id="userName" name="userName" placeholder="Ingrese su nombre de usuario" required>
                         </div>
                         <div class="form-group">
                             <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" placeholder="Ingrese su contraseña" required>
+                            <input type="userPassword" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-                        <div class="form-footer">
+                        <div class="form-footer mt-3 text-center">
                             <a href="#">¿Olvidaste tu contraseña?</a>
                             <a href="registroU.php">¿No tienes una cuenta? Regístrate como Usuario</a>
                             <a href="registroE.php">¿Eres una empresa? Regístrate aquí</a>
@@ -57,8 +53,5 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

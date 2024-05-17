@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Empresa - ShortJobs</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .register-container {
             margin-top: 100px;
@@ -30,26 +33,19 @@
                         <h2>Registro de Empresa</h2>
                         <p>Por favor, complete el siguiente formulario para registrar su empresa en ShortJobs</p>
                     </div>
-                    <form>
+                    <form action="procesarRegistro.php" method="POST">
+                        <input type="hidden" name="accountType" value="empresa">
                         <div class="form-group">
-                            <label for="companyName">Nombre de la Empresa</label>
-                            <input type="text" class="form-control" id="companyName" placeholder="Ingrese el nombre de su empresa" required>
+                            <label for="nombre">Nombre de la Empresa</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de su empresa" required>
                         </div>
                         <div class="form-group">
-                            <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tema">Tema</label>
-                            <input type="tema" class="form-control" id="tema" placeholder="Ingrese el tema de la empresa" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sedes">Sedes</label>
-                            <input type="sedes" class="form-control" id="sedes" placeholder="Ingrese las sedes" required>
+                            <label for="email">tema</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
                         </div>
                         <div class="form-group">
                             <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" placeholder="Ingrese su contraseña" required>
+                            <input type="userPassword" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                     </form>
@@ -57,8 +53,5 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
