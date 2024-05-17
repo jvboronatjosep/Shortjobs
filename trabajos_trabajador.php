@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
+            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 100px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,10 +38,6 @@
                         <a class="nav-link text-white" href="Contacto.php" style="margin-right: 30px;">Contacto</a>
                     </li>
                 </ul>
-                <div class="header-buttons">
-                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg btn-block" style="margin-right: 5px;">Iniciar Sesión</a>
-                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg btn-block">Registro</a>
-                </div>
             </div>
         </div>
     </nav>
@@ -53,18 +49,41 @@
 </div>
 
 
+          
+<section class="container">
 
 
-<div class="container-fluid py-5 d-flex justify-content-center align-items-center text-dark bg-light" style="height: 600px;">
-    <div class="row">
-        <div class="col-sm-6 text-center">
-            <h3 class="fw-bold" style="font-size: 55px; margin-right: 30px;">Empresa especializada<br>en unir talento <br>temporal con trabajos flexibles</h3>
-        </div>
-        <div class="col-sm-6 text-start align-self-center">
-            <h5 class="text-justify" style="font-size: 25px; margin-left: 30px;">Ofrecemos soluciones completas para trabajadores<br>temporales y empresas,desde selección de <br> talento hasta gestión de proyectos,<br> adaptándonos al mercado laboral <br>cambiante para garantizar el éxito. <br> <br><a href="">Leer más</a></h5>
-        </div>
-    </div>
+<div class="text-center mt-5">
+    <h3 class="mb-4" style="color: black;">TODOS LOS TRABAJOS</h3>
 </div>
+
+<form action="#" method="get" class="mt-5 form-search row gx-2">
+    <div class="col-md">
+        <input type="text" name="search" id="search" placeholder="Buscar trabajos" class="form-control">
+    </div>
+    <div class="col-md-auto">
+        <input type="submit" value="Buscar" class="my-button btn btn-primary">
+    </div>
+    <div class="col-md-auto">
+        <button class="my-button btn btn-secondary">Filtros de búsqueda</button>
+    </div>
+</form>
+
+
+
+<div class="container-fluid mt-5 mb-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px; height: 400px">
+  <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div style="padding: 20px; border-radius: 10px;">
+          <img src="/img/Temporada2.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">
+          <p class="text-center mt-3" style="font-size: 20px;">Temporada 2</p>
+      </div>
+  </div>
+  <div class="col-md-6 px-5 d-flex align-items-center justify-content-center">
+      <p class="mb-4">Problemas económicos, sentimentales y personales sacudirán a los residentes de 'Mirador de Montepinar' Nº 7, que en la segunda temporada de la serie contarán, entre otras cosas, con Amador como flamante presidente de la comunidad y un bar debajo de casa, el 'Henry & Max', propiedad de Enrique Pastor.</p>
+  </div>
+</div>
+
+</section>
 
 
 
