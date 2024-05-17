@@ -36,16 +36,12 @@
                     <form action="procesarRegistro.php" method="POST">
                         <input type="hidden" name="accountType" value="empresa">
                         <div class="form-group">
-                            <label for="nombre">Nombre de la Empresa</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de su empresa" required>
+                            <label for="empresaName">Nombre de la Empresa</label>
+                            <input type="text" class="form-control" id="empresaName" name="empresaName" placeholder="Ingrese el nombre de su empresa" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">tema</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
+                            <label for="empresaPassword">Contraseña</label>
+                            <input type="empresaPassword" class="form-control" id="empresaPassword" name="empresaPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                     </form>

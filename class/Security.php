@@ -3,9 +3,10 @@ class Security extends Conexion
 {
     private $loginPage = "login.php";
     private $homePage = "index.php";
-    public function __construct()
+    
+    public function __construct($confFile)
     {
-        parent::__construct();
+        parent::__construct($confFile);
         session_start();
     }
 

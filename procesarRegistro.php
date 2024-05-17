@@ -3,15 +3,15 @@ require_once 'Conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accountType = $_POST['accountType'];
-    $userName = $_POST['userName'];
+    $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT); 
 
     if ($accountType == "empresa") {
         $empresaName = $_POST['empresaName'];
-        $sql = "INSERT INTO empresas (empresaName, securePassword, empresaPassword) VALUES ('$email', '$password', '$companyName')";
+        $sql = "INSERT INTO empresas (empresaName, securePassword, empresaPassword) VALUES ('$empresaName', '$password', '')";
     } else {
-        $name = $_POST['userName'];
-        $sql = "INSERT INTO usuarios (userName, securePassword, userPasword) VALUES ('$email', '$password', '$userName')";
+        $userName = $_POST['userName'];
+        $sql = "INSERT INTO usuarios (userName, securePassword, userPasword) VALUES ('$userName', '$password', '')";
     }
 
     if ($conn->query($sql) === TRUE) {

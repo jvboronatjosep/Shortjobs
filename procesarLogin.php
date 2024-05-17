@@ -1,11 +1,14 @@
 <?php
-require_once 'Conexion.php'
-require_once 'Security.php';
+require_once 'autoloader.php';
 
-$security = new Security();
+$confFile = '/ruta/a/tu/conf.csv'; 
+$security = new Security($confFile);
 $message = $security->doLogin();
 
 if ($message) {
     echo $message;
 }
+
+header('Location: Inicio.php');
+
 ?>

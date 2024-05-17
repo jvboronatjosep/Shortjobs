@@ -33,7 +33,7 @@
                         <h2>Registro de Usuario</h2>
                         <p>Por favor, complete el siguiente formulario para registrarse como usuario en ShortJobs</p>
                     </div>
-                    <form action="procesar_registro.php" method="POST">
+                    <form action="procesarRegistro.php" method="POST">
                         <div class="form-group">
                             <label for="userName">Nombre de usuario</label>
                             <input type="text" class="form-control" id="userName" name="userName" placeholder="Ingrese su nombre de usuario" required>
