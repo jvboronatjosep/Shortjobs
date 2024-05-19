@@ -1,0 +1,16 @@
+ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0px;
+
+}
+
+.dia1{
+    grid-column-start: 5;
+}
+
+.dias_semana{
+    background-color: #eee;
+    font-weight: bold;
+}

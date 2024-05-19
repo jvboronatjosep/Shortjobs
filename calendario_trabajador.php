@@ -8,14 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c154837196.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style_trabajos.css">
+    <link rel="stylesheet" href="style_calendario_t.css">
     <style>
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
+            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 100px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,35 +54,8 @@
 
 
 <div class="text-center mt-5">
-    <h3 class="mb-4" style="color: black;">TODOS LOS TRABAJOS</h3>
+    <h3 class="mb-4" style="color: black;">Calendario</h3>
 </div>
-
-<form action="#" method="get" class="mt-5 form-search row gx-2">
-    <div class="col-md">
-        <input type="text" name="search" id="search" placeholder="Buscar trabajos" class="form-control">
-    </div>
-    <div class="col-md-auto">
-        <input type="submit" value="Buscar" class="my-button btn btn-primary">
-    </div>
-    <div class="col-md-auto">
-        <button class="my-button btn btn-secondary">Filtros de búsqueda</button>
-    </div>
-</form>
-
-
-
-<div class="container-fluid mt-5 mb-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px; height: 400px">
-  <div class="col-md-6 d-flex align-items-center justify-content-center">
-      <div style="padding: 20px; border-radius: 10px;">
-          <img src="/img/Temporada2.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">
-          <p class="text-center mt-3" style="font-size: 20px;">Temporada 2</p>
-      </div>
-  </div>
-  <div class="col-md-6 px-5 d-flex align-items-center justify-content-center">
-      <p class="mb-4">Problemas económicos, sentimentales y personales sacudirán a los residentes de 'Mirador de Montepinar' Nº 7, que en la segunda temporada de la serie contarán, entre otras cosas, con Amador como flamante presidente de la comunidad y un bar debajo de casa, el 'Henry & Max', propiedad de Enrique Pastor.</p>
-  </div>
-</div>
-
 </section>
 
 
