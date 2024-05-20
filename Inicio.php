@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs.png" alt=""></a>
+            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -95,7 +95,7 @@
 <div class="contacto"><footer class="pie-pagina">
     <div class="grupo-1">
         <div class="Caja">
-        <a href="Inicio.php"><img src="img/LogoShortJobs.png" alt="" width="200px"></a>
+        <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="" width="200px"></a>
 
         </div>
         <div class="Caja">
