@@ -11,6 +11,6 @@ $ubicacion = $_POST['ubicacion'];
 $fecha = $_POST['fecha'];
 $duracion = $_POST['duracion'];
 $gestion->editarTrabajo($id, $nombre, $descripcion, $tipo, $empresa, $ubicacion, $fecha, $duracion);
-header('Location: trabajos.php');
+header('Location: perfilEmpresa.php');
 
 ?>
