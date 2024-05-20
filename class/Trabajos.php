@@ -48,28 +48,7 @@ class Trabajos extends Conexion
             echo '</div>';
         }
     }
-    public function drawTrabajo($job)
-    {
-        echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
-        echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
-        echo '    <div style="padding: 20px; border-radius: 10px;">';
-        echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
-        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $job['nombre'] . ' </p>';
-        echo '    </div>';
-        echo '  </div>';
-        echo '  <div class="col-md-6 px-5">';
-        echo '    <p class="mb-4">' . $job['descripcion'] . '</p>';
-        echo '    <p class="mb-4">Tipo: ' . $job['tipo'] . '</p>';
-        echo '    <p class="mb-4">Empresa: ' . $job['empresa'] . '</p>';
-        echo '    <p class="mb-4">Ubicación: ' . $job['ubicacion'] . '</p>';
-        echo '    <p class="mb-4">Fecha: ' . $job['fecha'] . '</p>';
-        echo '    <p class="mb-4">Salario: ' . $job['salario'] . '</p>';
-        echo '    <p class="mb-4">Duración: ' . $job['duracion'] . '</p>';
-        echo '  </div>';
-        echo '</div>';
-
-    }
-
+  
 
     public function editarTrabajo($id, $nombre, $descripcion, $tipo, $empresa, $ubicacion, $fecha, $duracion)
     {
@@ -86,13 +65,51 @@ class Trabajos extends Conexion
         $conn = $this->connect();
         $sql = "SELECT * FROM trabajos WHERE id = '$id'";
         $result = $conn->query($sql);
-        $trabajo = null; // Inicializamos la variable $trabajo como null
+        $trabajo = null; 
         if ($result->num_rows > 0) {
-            $trabajo = $result->fetch_assoc(); // Asignamos el resultado a la variable $trabajo
+            $trabajo = $result->fetch_assoc(); 
         }
         return $trabajo;
     }
+    public function getTrabajoByName($userName)
+    {
+        $conn = $this->connect();
+        $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
+        $result = $conn->query($sql);
+        $nombre = null;
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $nombre = $row['nombre'];
+        }
+        $conn->close();
+        return $nombre;
+    }
     
+    public function drawTrabajo($nombre)
+    {
+        echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
+        echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
+        echo '    <div style="padding: 20px; border-radius: 10px;">';
+        echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $nombre['nombre'] . ' </p>';
+        echo '    </div>';
+        echo '  </div>';
+        echo '  <div class="col-md-6 px-5">';
+        echo '    <p class="mb-4">' . $nombre['descripcion'] . '</p>';
+        echo '    <p class="mb-4">Tipo: ' . $nombre['tipo'] . '</p>';
+        echo '    <p class="mb-4">Empresa: ' . $nombre['empresa'] . '</p>';
+        echo '    <p class="mb-4">Ubicación: ' . $nombre['ubicacion'] . '</p>';
+        echo '    <p class="mb-4">Fecha: ' . $nombre['fecha'] . '</p>';
+        echo '    <p class="mb-4">Salario: ' . $nombre['salario'] . '</p>';
+        echo '    <p class="mb-4">Duración: ' . $nombre['duracion'] . '</p>';
+        echo "<a href='formularioEditarTrabajo.php?id=" . $nombre['id'] . "'><button>Editar Trabajo </button></a>";
+        echo "<a href='detalle.php?id=" . $nombre['id'] . "'><button>Ver</button></a>";
+        echo "<a href='borrarTrabajo.php?id=" . $nombre['id'] . "'><button>Borrar</button></a>";
+        echo '  </div>';
+        echo '</div>';
+
+    }
+
     public function borrarUnTrabajo($id){
         $conn = $this->connect();
 

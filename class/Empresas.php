@@ -58,7 +58,7 @@ class Empresas extends Conexion
             echo "<h1>Empresa no encontrada</h1>";
         }
     }
-    
+
     public function drawEmpresas($empresas)
     {
     

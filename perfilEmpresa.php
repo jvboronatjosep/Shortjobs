@@ -2,9 +2,11 @@
 require_once 'autoloader.php';
 $confFile = "./conf.csv";
 $gestion = new Empresas($confFile);
+$trabajos = new Trabajos($confFile);
 $userName = $_POST['userName'];
 
 $brandsObtained = $gestion->getEmpresas();
+$trabajoObstained = $trabajos->getTrabajoByName($userName);
 
 
 
@@ -42,7 +44,7 @@ $nombres = $gestion->getEmpresaByName($userName);
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
         <div class="container-fluid">
-         
+
         </div>
     </nav>
 
@@ -50,7 +52,7 @@ $nombres = $gestion->getEmpresaByName($userName);
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <?php
-               
+
                 $gestion->drawNombre($nombres);
                 ?>
                 <p>Aquí puedes ver y gestionar los perfiles de las empresas registradas en nuestra plataforma.</p>
@@ -63,9 +65,9 @@ $nombres = $gestion->getEmpresaByName($userName);
         </div>
         <div class="row">
             <?php
-            // Dibujar las empresas obtenidas
-            $brandsObtained = $gestion->getEmpresas();
-            $gestion->drawEmpresas($brandsObtained);
+          
+           
+            $trabajos->drawTrabajo($trabajoObstained);
             ?>
         </div>
     </div>
