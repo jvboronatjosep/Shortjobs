@@ -14,11 +14,15 @@
   .nav-link {
     font-size: 18px;
   }
-    
-  .carousel-image {
-    height: 900px;
-    object-fit: cover; 
-  }
+  .nav-link.active {
+    text-decoration: underline;
+}
+
+  
+  .img_principal img {
+    height: 600px;
+    object-fit: cover;
+}
   
     .header-buttons {
     display: flex;
@@ -235,7 +239,7 @@ body{
 }
 
 .pie-pagina .grupo-2{
-    background-color: yellow;
+    background-color: white;
     padding: 15px 10px;
     text-align: center;
     color: black;

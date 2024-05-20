@@ -100,6 +100,9 @@ body{
   color: yellow;
 }
 
+.nav-link.active {
+    text-decoration: underline;
+}
 
 
 /* Botones */
