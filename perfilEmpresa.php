@@ -47,7 +47,7 @@ $nombres = $gestion->getEmpresaByName($userName);
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <div class="d-flex ms-auto">
-                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 15px;">Iniciar Sesión</a>
+                    <a href="inicioSesionE.php" class="btn btn-light btn-lg" style="margin-right: 15px;">Iniciar Sesión</a>
                     <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 60px;">Registro</a>
                 </div>
             </div>
@@ -76,6 +76,10 @@ $nombres = $gestion->getEmpresaByName($userName);
                 <img src="img/LogoEmpresa.png" alt="Logo de la Empresa" class="img-fluid" style="max-height: 200px;">
             </div>
         </div>
+        
+        <a href="formularioCrearTrabajo.php">
+        <button>Publicar Oferta</button></a>
+
         <div class="row"  >
             <?php
             
@@ -86,11 +90,11 @@ $nombres = $gestion->getEmpresaByName($userName);
 
     <footer class="bg-dark text-light py-4">
         <div class="container">
-            <!-- Footer Content -->
+           
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
