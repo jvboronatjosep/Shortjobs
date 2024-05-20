@@ -1,24 +1,21 @@
 <?php
 require_once 'autoloader.php';
+
 $confFile = "./conf.csv";
 $gestion = new Empresas($confFile);
 $trabajos = new Trabajos($confFile);
-$userName = $_POST['userName'];
 
+// Validar y sanitizar la entrada del usuario
+$userName = isset($_POST['userName']) ? htmlspecialchars($_POST['userName']) : '';
+
+// Obtener empresas y trabajos asociados al nombre de usuario
 $brandsObtained = $gestion->getEmpresas();
-$trabajoObstained = $trabajos->getTrabajoByName($userName);
-
-
-
-
-
+$trabajoObstained = $trabajos->getTrabajosByEmpresa($userName);
 $nombres = $gestion->getEmpresaByName($userName);
-
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,12 +36,11 @@ $nombres = $gestion->getEmpresaByName($userName);
         }
     </style>
 </head>
-
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
         <div class="container-fluid">
-
+            <!-- Navbar content -->
         </div>
     </nav>
 
@@ -52,8 +48,11 @@ $nombres = $gestion->getEmpresaByName($userName);
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <?php
-
-                $gestion->drawNombre($nombres);
+                if ($nombres) {
+                    $gestion->drawNombre($nombres);
+                } else {
+                    echo "<p>No se encontraron empresas asociadas al usuario.</p>";
+                }
                 ?>
                 <p>Aquí puedes ver y gestionar los perfiles de las empresas registradas en nuestra plataforma.</p>
             </div>
@@ -65,9 +64,7 @@ $nombres = $gestion->getEmpresaByName($userName);
         </div>
         <div class="row">
             <?php
-          
-           
-            $trabajos->drawTrabajo($trabajoObstained);
+            $trabajos->drawTrabajos($trabajoObstained);
             ?>
         </div>
     </div>
@@ -81,5 +78,4 @@ $nombres = $gestion->getEmpresaByName($userName);
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
