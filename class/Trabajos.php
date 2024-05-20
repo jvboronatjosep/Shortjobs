@@ -72,43 +72,46 @@ class Trabajos extends Conexion
         return $trabajo;
     }
     public function getTrabajoByName($userName)
-    {
-        $conn = $this->connect();
-        $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
-        $result = $conn->query($sql);
-        $nombre = null;
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $nombre = $row['nombre'];
-        }
-        $conn->close();
-        return $nombre;
+{
+    $conn = $this->connect();
+    $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
+    $result = $conn->query($sql);
+    $trabajo = null;
+    if ($result->num_rows > 0) {
+        $trabajo = $result->fetch_assoc();
     }
-    
-    public function drawTrabajo($nombre)
-    {
+    $conn->close();
+    return $trabajo;
+}
+
+public function drawTrabajo($trabajo)
+{
+    if ($trabajo) {
         echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
         echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
         echo '    <div style="padding: 20px; border-radius: 10px;">';
         echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
-        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $nombre['nombre'] . ' </p>';
+        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
         echo '    </div>';
         echo '  </div>';
         echo '  <div class="col-md-6 px-5">';
-        echo '    <p class="mb-4">' . $nombre['descripcion'] . '</p>';
-        echo '    <p class="mb-4">Tipo: ' . $nombre['tipo'] . '</p>';
-        echo '    <p class="mb-4">Empresa: ' . $nombre['empresa'] . '</p>';
-        echo '    <p class="mb-4">Ubicación: ' . $nombre['ubicacion'] . '</p>';
-        echo '    <p class="mb-4">Fecha: ' . $nombre['fecha'] . '</p>';
-        echo '    <p class="mb-4">Salario: ' . $nombre['salario'] . '</p>';
-        echo '    <p class="mb-4">Duración: ' . $nombre['duracion'] . '</p>';
-        echo "<a href='formularioEditarTrabajo.php?id=" . $nombre['id'] . "'><button>Editar Trabajo </button></a>";
-        echo "<a href='detalle.php?id=" . $nombre['id'] . "'><button>Ver</button></a>";
-        echo "<a href='borrarTrabajo.php?id=" . $nombre['id'] . "'><button>Borrar</button></a>";
+        echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
+        echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
+        echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
+        echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+        echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
+        echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
+        echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
+        echo "<a href='formularioEditarTrabajo.php?id=" . $trabajo['id'] . "'><button>Editar Trabajo </button></a>";
+        echo "<a href='detalle.php?id=" . $trabajo['id'] . "'><button>Ver</button></a>";
+        echo "<a href='borrarTrabajo.php?id=" . $trabajo['id'] . "'><button>Borrar</button></a>";
         echo '  </div>';
         echo '</div>';
-
+    } else {
+        echo "Trabajo no encontrado.";
     }
+}
+
 
     public function borrarUnTrabajo($id){
         $conn = $this->connect();
