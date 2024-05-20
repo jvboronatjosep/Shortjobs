@@ -26,7 +26,8 @@ $nombres = $gestion->getEmpresaByName($userName);
         .navbar-dark .navbar-nav .nav-link {
             color: white;
         }
-
+        
+       
         .navbar-dark .navbar-brand img {
             filter: brightness(0) invert(1);
         }
@@ -40,7 +41,7 @@ $nombres = $gestion->getEmpresaByName($userName);
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
         <div class="container-fluid">
-            <!-- Navbar content -->
+           
         </div>
     </nav>
 
@@ -54,20 +55,25 @@ $nombres = $gestion->getEmpresaByName($userName);
                     echo "<p>No se encontraron empresas asociadas al usuario.</p>";
                 }
                 ?>
-                <p>Aquí puedes ver y gestionar los perfiles de las empresas registradas en nuestra plataforma.</p>
+                <?php
+                echo "<p>¡Bienvenido! </p>";
+                ?>
+
             </div>
         </div>
+
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <img src="img/LogoEmpresa.png" alt="Logo de la Empresa" class="img-fluid" style="max-height: 200px;">
             </div>
         </div>
-        <div class="row">
+        <div class="row"  >
             <?php
+            
             $trabajos->drawTrabajos($trabajoObstained);
             ?>
         </div>
-    </div>
+    
 
     <footer class="bg-dark text-light py-4">
         <div class="container">
