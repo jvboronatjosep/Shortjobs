@@ -86,9 +86,9 @@ class Trabajos extends Conexion
         $conn = $this->connect();
         $sql = "SELECT * FROM trabajos WHERE id = '$id'";
         $result = $conn->query($sql);
-        $trabajo = null; // Inicializamos la variable $trabajo como null
+        $trabajo = null; 
         if ($result->num_rows > 0) {
-            $trabajo = $result->fetch_assoc(); // Asignamos el resultado a la variable $trabajo
+            $trabajo = $result->fetch_assoc();
         }
         return $trabajo;
     }
