@@ -45,21 +45,50 @@
     
     <div>
         <div class="img_principal">
-            <img src="img/img_inicio_trabajador.jpg" class="d-block w-100" alt="...">
+            <img src="img/foto_inicio_contacto.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
 
-    <div class="container-fluid py-5 d-flex justify-content-center align-items-center text-dark bg-light" style="height: 600px;">
-        <div class="row">
-            <div class="col-sm-6 text-center">
-                <h3 class="fw-bold" style="font-size: 65px;">Plataforma especializada <br> en conectar <br> usuarios con <br> trabajos temporales</h3>
-            </div>
-            <div class="col-sm-6 text-start align-self-center">
-                <h5 class="text-justify" style="font-size: 24px;">Descubre una amplia variedad de trabajos temporales diseñados para ajustarse a tu estilo de vida. Con nuestra plataforma, encontrar oportunidades laborales flexibles es rápido y sencillo. Desde trabajos a tiempo parcial hasta proyectos freelance, estamos aquí para ayudarte a encontrar tu próximo desafío laboral.<br> <br><a href="">Leer más</a></h5>
-            </div>
+    <body>
 
-        </div>
-    </div>
+<div class="container">
+    <h2>Formulario de Contacto</h2>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre = htmlspecialchars($_POST['nombre']);
+        $email = htmlspecialchars($_POST['email']);
+        $mensaje = htmlspecialchars($_POST['mensaje']);
+        $para = 'tu-email@dominio.com'; // Cambia esto a tu dirección de correo electrónico
+        $asunto = 'Nuevo mensaje de contacto';
+        
+        $cuerpoMensaje = "Nombre: $nombre\nCorreo: $email\n\nMensaje:\n$mensaje";
+        
+        $cabeceras = 'From: ' . $email . "\r\n" .
+                     'Reply-To: ' . $email . "\r\n" .
+                     'X-Mailer: PHP/' . phpversion();
+        
+        if (mail($para, $asunto, $cuerpoMensaje, $cabeceras)) {
+            echo '<p class="success">Mensaje enviado correctamente.</p>';
+        } else {
+            echo '<p class="error">Error al enviar el mensaje. Inténtalo de nuevo más tarde.</p>';
+        }
+    }
+    ?>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+</body>
 </body>
 <footer class="pie-pagina">
         <div class="grupo-1">
