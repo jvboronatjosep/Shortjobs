@@ -38,7 +38,7 @@ class Empresas extends Conexion
 
     public function drawEmpresas($empresas)
     {
-        echo "<a href='formularioCrearTrabajo.php'><button>Crear Trabajo</button></a>";
+    
         foreach ($empresas as $empresa) { 
             echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
             echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
