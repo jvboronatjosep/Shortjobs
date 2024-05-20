@@ -36,6 +36,29 @@ class Empresas extends Conexion
         return $trabajo;
     }
 
+    public function getEmpresaByName($userName)
+    {
+        $conn = $this->connect();
+        $sql = "SELECT nombre FROM empresas WHERE nombre = '$userName'";
+        $result = $conn->query($sql);
+        $nombre = null;
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $nombre = $row['nombre'];
+        }
+        $conn->close();
+        return $nombre;
+    }
+    
+    public function drawNombre($name){
+        $nombre = $this->getEmpresaByName($name);
+        if ($nombre) {
+            echo "<h1>Perfil Empresa: $nombre</h1>";
+        } else {
+            echo "<h1>Empresa no encontrada</h1>";
+        }
+    }
+    
     public function drawEmpresas($empresas)
     {
     
