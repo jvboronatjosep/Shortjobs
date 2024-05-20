@@ -39,9 +39,18 @@ $nombres = $gestion->getEmpresaByName($userName);
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
         <div class="container-fluid">
-           
+            <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 50px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <div class="d-flex ms-auto">
+                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 15px;">Iniciar Sesión</a>
+                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 60px;">Registro</a>
+                </div>
+            </div>
         </div>
     </nav>
 
