@@ -40,7 +40,7 @@
                         </div>
                         <div class="form-group">
                             <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
+                            <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                     </form>

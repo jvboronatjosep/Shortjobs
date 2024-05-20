@@ -1,8 +1,8 @@
 <?php
 class Security extends Conexion
 {
-    private $loginPage = "login.php";
-    private $homePage = "index.php";
+    private $loginPage = "Empresa-Usuario.php";
+    private $homePage = "inicio.php";
     
     public function __construct($confFile)
     {
@@ -56,7 +56,7 @@ class Security extends Conexion
 
     private function getUser($userName)
     {
-        $sql = "SELECT * FROM users WHERE userName = '$userName'";
+        $sql = "SELECT * FROM usuarios WHERE userName = '$userName'";
         $result = $this->conn->query($sql);
         if ($result->num_rows > 0) {
             return $result->fetch_assoc();

@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="empresaPassword">Contraseña</label>
-                            <input type="empresaPassword" class="form-control" id="empresaPassword" name="empresaPassword" placeholder="Ingrese su contraseña" required>
+                            <input type="password" class="form-control" id="empresaPassword" name="empresaPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                     </form>

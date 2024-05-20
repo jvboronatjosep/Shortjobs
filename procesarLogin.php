@@ -1,7 +1,7 @@
 <?php
 require_once 'autoloader.php';
 
-$confFile = '/ruta/a/tu/conf.csv'; 
+$confFile = 'conf.csv'; 
 $security = new Security($confFile);
 $message = $security->doLogin();
 

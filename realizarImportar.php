@@ -2,7 +2,7 @@
 
 require_once 'autoloader.php'; 
 
-$confFile = "./conf.csv";
+$confFile = "conf.csv";
 $importEmpresa = "empresas.csv";
 $importUsuarios = "usuarios.csv";
 $importTrabajos = "trabajos.csv";
