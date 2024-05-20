@@ -37,7 +37,7 @@
                         <h2>Inicio de Sesión para Empresas</h2>
                         <p>Bienvenido a ShortJobs</p>
                     </div>
-                    <form action="seleccionarNombre.php" method="post">
+                    <form action="perfilEmpresa.php" method="post">
                         <div class="form-group">
                             <label for="userName">Nombre de usuario</label>
                             <input type="text" class="form-control" id="userName" name="userName" placeholder="Ingrese nombre de usuario" required>

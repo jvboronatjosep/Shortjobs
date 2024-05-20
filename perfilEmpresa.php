@@ -2,18 +2,17 @@
 require_once 'autoloader.php';
 $confFile = "./conf.csv";
 $gestion = new Empresas($confFile);
+$userName = $_POST['userName'];
 
-// Verificar si la clave "userName" está presente en $_POST antes de acceder a ella
-$userName = isset($_POST['userName']) ? $_POST['userName'] : null;
+$brandsObtained = $gestion->getEmpresas();
 
-// Si la clave "userName" no está presente, $userName será null
-// Puedes agregar una verificación adicional si es necesario, por ejemplo, redireccionar al usuario a otra página si no se proporciona el nombre de usuario
-if ($userName === null) {
-    // Redireccionar al usuario a otra página o mostrar un mensaje de error
-    exit("El nombre de usuario no se ha proporcionado.");
-}
 
-$nameObtained = $gestion->getEmpresaByName($userName);
+
+
+
+$nombres = $gestion->getEmpresaByName($userName);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +42,7 @@ $nameObtained = $gestion->getEmpresaByName($userName);
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
         <div class="container-fluid">
-            <!-- Navbar Content -->
+         
         </div>
     </nav>
 
@@ -51,8 +50,8 @@ $nameObtained = $gestion->getEmpresaByName($userName);
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <?php
-                // Dibujar el nombre de la empresa
-                $gestion->drawNombre($nameObtained);
+               
+                $gestion->drawNombre($nombres);
                 ?>
                 <p>Aquí puedes ver y gestionar los perfiles de las empresas registradas en nuestra plataforma.</p>
             </div>

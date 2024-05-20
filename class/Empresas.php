@@ -50,10 +50,10 @@ class Empresas extends Conexion
         return $nombre;
     }
     
-    public function drawNombre($name){
-        $nombre = $this->getEmpresaByName($name);
-        if ($nombre) {
-            echo "<h1>Perfil Empresa: $nombre</h1>";
+    public function drawNombre($nombre){
+        $name = $this->getEmpresaByName($nombre);
+        if ($name) {
+            echo "<h1>$name </h1>";
         } else {
             echo "<h1>Empresa no encontrada</h1>";
         }
