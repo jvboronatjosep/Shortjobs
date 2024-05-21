@@ -1,11 +1,10 @@
-dni,nombreCompleto,numeroSeguridadSocial,curriculum,direccion,ciudad,correoElectronico,nombreUsuario,contraseña,valoracion
-"12345678F","Juan Pérez",123456789,"Curriculum Juan Pérez","Calle Principal 123","Ciudad A","juan@example.com","juanperez","contraseña123",4
-"98765432R","María García",987654321,"Curriculum María García","Avenida Central 456","Ciudad B","maria@example.com","mariagarcia","maria123",5
-"45678912Y","Pedro López",456789123,"Curriculum Pedro López","Plaza Mayor 789","Ciudad C","pedro@example.com","pedrolopez","pedro456",3
-"78912345H","Ana Martínez",789123456,"Curriculum Ana Martínez","Paseo Secundario 321","Ciudad D","ana@example.com","anamartinez","ana789",4
-"32165498A","Luis Rodríguez",321654987,"Curriculum Luis Rodríguez","Ronda Norte 654","Ciudad E","luis@example.com","luisrodriguez","luis321",5
-"65498732D","Laura Sánchez",654987321,"Curriculum Laura Sánchez","Camino Viejo 987","Ciudad F","laura@example.com","laurasanchez","laura987",3
-"23456789G","Carlos Hernández",234567891,"Curriculum Carlos Hernández","Calle Nueva 234","Ciudad G","carlos@example.com","carloshernandez","carlos234",4
-"87654321I","Sara López",876543219,"Curriculum Sara López","Avenida Antigua 567","Ciudad H","sara@example.com","saralopez","sara876",5
-"56789123O","David Pérez",567891234,"Curriculum David Pérez","Plaza Vieja 891","Ciudad I","david@example.com","davidperez","david891",3
-"19876543W","Elena Rodríguez",198765432,"Curriculum Elena Rodríguez","Calle Mayor 198","Ciudad J","elena@example.com","elenarodriguez","elena198",4
+12345678F,Juan Pérez,123456789,Curriculum Juan Pérez,Calle Principal 123,CiudadA,juan@example.com,juanperez,contraseña123,4
+98765432R,María García,987654321,Curriculum María García,Avenida Central 456,CiudadB,maria@example.com,mariagarcia,maria123,5
+45678912Y,Pedro López,456789123,Curriculum Pedro López,Plaza Mayor 789,CiudadC,pedro@example.com,pedrolopez,pedro456,3
+78912345H,Ana Martínez,789123456,Curriculum Ana Martínez,Paseo Secundario 321,CiudadD,ana@example.com,anamartinez,ana789,4
+32165498A,Luis Rodríguez,321654987,Curriculum Luis Rodríguez,Ronda Norte 654,CiudadE,luis@example.com,luisrodriguez,luis321,5
+65498732D,Laura Sánchez,654987321,Curriculum Laura Sánchez,Camino Viejo 987,CiudadF,laura@example.com,laurasanchez,laura987,3
+23456789G,Carlos Hernández,234567891,Curriculum Carlos Hernández,Calle Nueva 234,CiudadG,carlos@example.com,carloshernandez,carlos234,4
+87654321I,Sara López,876543219,Curriculum Sara López,Avenida Antigua 567,CiudadH,sara@example.com,saralopez,sara876,5
+56789123O,David Pérez,567891234,Curriculum David Pérez,Plaza Vieja 891,CiudadI,david@example.com,davidperez,david891,3
+19876543W,Elena Rodríguez,198765432,Curriculum Elena Rodríguez,Calle Mayor 198,CiudadJ,elena@example.com,elenarodriguez,elena198,4 

@@ -15,11 +15,12 @@ class Importar extends Conexion
         $conn = $this->connect();
         if (($handle = fopen($fileEmpresa, "r")) !== false) {
             while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-                $tema = $data[0];
-                $nombre = $data[1];
-                $sedes = $data[2];
-
-                $sql = "INSERT INTO empresas (tema, nombre, sedes) VALUES ('$tema', '$nombre', '$sedes')";
+                $tema = $data[1];
+                $nombre = $data[2];
+                $sedes = $data[3];
+                $valoracionE = $data[4];
+                
+                $sql = "INSERT INTO empresas (tema, nombre, sedes, valoracion) VALUES ('$tema', '$nombre', '$sedes', '$valoracionE')";
                 if (!$conn->query($sql)) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
@@ -45,8 +46,9 @@ class Importar extends Conexion
                 $correoElectronico = $data[6];
                 $nombreUsuario = $data[7];
                 $contraseña = $data[8];
+                $valoracionU = $data[9];
 
-                $sql = "INSERT INTO usuarios (dni, nombreCompleto, numeroSeguridadSocial, curriculum, direccion, ciudad, correoElectronico, nombreUsuario, contraseña) VALUES ('$dni', '$nombreCompleto', '$numeroSeguridadSocial', '$curriculum', '$direccion', '$ciudad', '$correoElectronico', '$nombreUsuario', '$contraseña')";
+                $sql = "INSERT INTO usuarios (dni, nombreCompleto, numeroSeguridadSocial, curriculum, direccion, ciudad, correoElectronico, nombreUsuario, contraseña, valoracion) VALUES ('$dni', '$nombreCompleto', '$numeroSeguridadSocial', '$curriculum', '$direccion', '$ciudad', '$correoElectronico', '$nombreUsuario', '$contraseña', '$valoracionU')";
                 if (!$conn->query($sql)) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
@@ -63,17 +65,17 @@ class Importar extends Conexion
         $conn = $this->connect();
         if (($handle = fopen($fileTrabajos, "r")) !== false) {
             while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-                $nombre = $data[0];
-                $tipo = $data[1];
-                $empresa = $data[2];
-                $descripcion = $data[3];
-                $ubicacion = $data[4];
-                $fecha = $data[5];
-                $salario = $data[6];
-                $duracion = $data[7];
+                $nombre = $data[1];
+                $tipo = $data[2];
+                $empresa = $data[3];
+                $descripcion = $data[4];
+                $ubicacion = $data[5];
+                $fecha = $data[6];
+                $salario = $data[7];
+                $duracion = $data[8];
 
 
-                $sql = "INSERT INTO trabajos (nombre,tipo, empresa,descripcion, ubicacion, fecha, salario, duracion) VALUES ('$nombre','$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha','$salario', '$duracion')";
+                $sql = "INSERT INTO trabajos (nombre, tipo, empresa, descripcion, ubicacion, fecha, salario, duracion) VALUES ('$nombre','$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha','$salario', '$duracion')";
                 if (!$conn->query($sql)) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

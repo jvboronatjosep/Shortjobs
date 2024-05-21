@@ -15,7 +15,7 @@ CREATE TABLE usuarios (
     ciudad VARCHAR(30),
     correoElectronico VARCHAR(30),
     nombreUsuario VARCHAR(50),
-    contraseña VARCHAR(100)
+    contraseña VARCHAR(100),
     valoracion INT CHECK (valoracion BETWEEN 1 AND 5)
 );
 
@@ -39,7 +39,7 @@ create table trabajos(
     ubicacion varchar (50),
     fecha date,
     salario decimal,
-    duracion decimal,
+    duracion decimal
 );
 
 

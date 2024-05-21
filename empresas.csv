@@ -1,6 +1,5 @@
-id,tema,nombre,sedes,valoracion
-1,"Tecnología","JuanSL","Sede A, Sede B",4
-2,"Ciencia","MaríaSL","Sede C",5
-3,"Matemáticas","HermanosSL","Sede A, Sede D",3
-4,"Historia","GómezCCS","Sede B",4
-5,"Literatura","PacoPaco","Sede C, Sede D",2
+1,Tecnología,JuanSL,Catarroja,4
+2,Ciencia,MaríaSL,Almusafes,5
+3,Matemáticas,HermanosSL,Madriz,3
+4,Historia,GómezCCS,Albal,4
+5,Literatura,PacoPaco,Paiporta,2
