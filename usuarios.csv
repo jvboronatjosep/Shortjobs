@@ -1,43 +1,11 @@
-"12345678A","Juan Pérez",123456789,"Licenciado en Informática. Experiencia en desarrollo de software.","Calle Principal 123","Madrid","juan.perez@example.com","juancito","contraseña123"
-"98765432B","María García",987654321,"Ingeniera Industrial. Especializada en gestión de proyectos.","Avenida Central 456","Barcelona","maria.garcia@example.com","mariag","segura456"
-"45678912C","Pedro Martínez",456789123,"Técnico en Electricidad. Experiencia en mantenimiento industrial.","Calle Secundaria 789","Valencia","pedro.martinez@example.com","pedritox","clave789"
-"11122233D","Laura Sánchez",111222333,"Diseñadora Gráfica. Especializada en branding y diseño de interfaces.","Plaza Mayor 1","Madrid","laura.sanchez@example.com","lauras","contraseña456"
-"44455566E","Carlos Rodríguez",444555666,"Ingeniero Civil. Experiencia en diseño y supervisión de proyectos de construcción.","Calle Gran Vía 789","Barcelona","carlos.rodriguez@example.com","carlitosr","segura789"
-"77788899F","Ana López",777888999,"Psicóloga Clínica. Especializada en terapia cognitivo-conductual.","Paseo de la Castellana 456","Madrid","ana.lopez@example.com","anal","clave123"
-"99988877G","David Fernández",999888777,"Chef Ejecutivo. Experiencia en cocina internacional y gestión de equipos.","Calle del Sol 123","Barcelona","david.fernandez@example.com","davidf","contraseña789"
-"66655544H","Elena Ruiz",666555444,"Arquitecta. Especializada en diseño sostenible y eficiencia energética.","Calle Mayor 456","Valencia","elena.ruiz@example.com","elenar","segura123"
-"33322211I","Javier Gómez",333222111,"Ingeniero de Software. Experiencia en desarrollo web y aplicaciones móviles.","Avenida Diagonal 789","Barcelona","javier.gomez@example.com","javig","clave456"
-"11223344J","Sara García",112233445,"Abogada. Especializada en derecho civil y laboral.","Calle Alcalá 789","Madrid","sara.garcia@example.com","sarag","contraseña789"
-"44455566K","Martín López",444555666,"Economista. Experiencia en análisis financiero y planificación estratégica.","Avenida de América 456","Barcelona","martin.lopez@example.com","martinl","segura123"
-"77766655L","Carmen Martínez",777666555,"Médico General. Especializada en atención primaria y medicina preventiva.","Calle Serrano 123","Madrid","carmen.martinez@example.com","carmenm","clave456"
-"99900011M","Alberto Pérez",999000111,"Periodista. Especializado en redacción y edición de noticias.","Paseo del Prado 789","Barcelona","alberto.perez@example.com","albertop","contraseña123"
-"12345678N","Lucía García",123456789,"Psicóloga Clínica. Especializada en terapia familiar y de pareja.","Calle Gran Vía 456","Valencia","lucia.garcia@example.com","luciag","segura789"
-"98765432O","Manuel Rodríguez",987654321,"Ingeniero de Telecomunicaciones. Experiencia en redes y sistemas de comunicación.","Plaza Mayor 1","Madrid","manuel.rodriguez@example.com","manuelr","contraseña123"
-"45678912P","María Sánchez",456789123,"Profesora de Educación Primaria. Especializada en pedagogía.","Avenida Diagonal 789","Barcelona","maria.sanchez@example.com","marias","segura456"
-"11122233Q","Juan Martínez",111222333,"Diseñador Web. Experiencia en diseño UX/UI y desarrollo front-end.","Calle Mayor 123","Valencia","juan.martinez@example.com","juanm","clave789"
-"44455566R","Sofía López",444555666,"Bióloga. Especializada en ecología y conservación.","Paseo de Gracia 456","Madrid","sofia.lopez@example.com","sofial","contraseña456"
-"77788899S","Antonio García",777888999,"Ingeniero Mecánico. Experiencia en diseño y fabricación de maquinaria.","Calle del Carmen 789","Barcelona","antonio.garcia@example.com","antoniog","segura789"
-"99988877T","Ana Martínez",999888777,"Diseñadora de Moda. Especializada en alta costura y diseño de vestuario.","Avenida de América 123","Valencia","ana.martinez@example.com","anam","clave123"
-"66655544U","Carlos Fernández",666555444,"Diseñador Industrial. Especializado en diseño de producto y prototipado.","Calle Gran Vía 456","Madrid","carlos.fernandez@example.com","carlosf","contraseña789"
-"33322211V","Eva Rodríguez",333222111,"Psicóloga Clínica. Especializada en terapia cognitiva y mindfulness.","Plaza España 789","Barcelona","eva.rodriguez@example.com","evar","segura123"
-"11223344W","Pablo Gómez",112233445,"Desarrollador Full Stack. Experiencia en tecnologías web y móviles.","Calle Mayor 123","Madrid","pablo.gomez@example.com","pablog","clave456"
-"44455566X","Isabel López",444555666,"Médico Especialista en Dermatología. Experiencia en diagnóstico y tratamiento de enfermedades de la piel.","Avenida Diagonal 456","Barcelona","isabel.lopez@example.com","isabell","contraseña123"
-"77766655Y","Marta Martínez",777666555,"Abogada. Especializada en derecho penal y civil.","Paseo de Gracia 789","Madrid","marta.martinez@example.com","martam","segura456"
-"99900011Z","Jorge Pérez",999000111,"Consultor de Marketing Digital. Especializado en estrategias de marketing online.","Calle Gran Vía 123","Valencia","jorge.perez@example.com","jorgep","clave789"
-"A12345678","Patricia García",123456789,"Nutricionista. Especializada en alimentación saludable y dietas personalizadas.","Avenida Diagonal 456","Barcelona","patricia.garcia@example.com","patriciag","contraseña123"
-"B98765432","Diego Rodríguez",987654321,"Ingeniero Eléctrico. Experiencia en diseño de sistemas eléctricos.","Calle Mayor 789","Madrid","diego.rodriguez@example.com","diegor","segura456"
-"C45678912","Natalia Sánchez",456789123,"Diseñadora Gráfica. Especializada en diseño de branding y creación de identidad visual.","Plaza España 123","Valencia","natalia.sanchez@example.com","natalias","clave789"
-"D11122233","Luis Martínez",111222333,"Programador Java. Experiencia en desarrollo de aplicaciones empresariales.","Calle Gran Vía 456","Barcelona","luis.martinez@example.com","luism","contraseña123"
-"E44455566","Paula López",444555666,"Veterinaria. Especializada en medicina preventiva y atención clínica.","Paseo de Gracia 789","Madrid","paula.lopez@example.com","paolal","segura456"
-"F77788899","Roberto García",777888999,"Diseñador Gráfico. Especializado en diseño editorial y creación de logotipos.","Calle Mayor 123","Valencia","roberto.garcia@example.com","robertog","clave789"
-"G99988877","Elena Martínez",999888777,"Ingeniera de Procesos. Experiencia en optimización de procesos industriales.","Avenida Diagonal 456","Barcelona","elena.martinez@example.com","elenam","contraseña123"
-"H66655544","Andrés Fernández",666555444,"Traductor. Especializado en traducción técnica y jurídica.","Plaza España 789","Madrid","andres.fernandez@example.com","andresf","segura456"
-"I33322211","Isabel García",333222111,"Ingeniera Química. Especializada en procesos de producción y control de calidad.","Calle Gran Vía 456","Barcelona","isabel.garcia@example.com","isabelg","clave789"
-"J11223344","Miguel López",112233445,"Psicólogo Clínico. Especializado en terapia cognitivo-conductual.","Paseo de Gracia 123","Valencia","miguel.lopez@example.com","miguell","contraseña123"
-"K55544433","Silvia Martínez",555444333,"Diseñadora de Interiores. Especializada en diseño residencial y comercial.","Avenida Diagonal 456","Madrid","silvia.martinez@example.com","silviam","segura456"
-"L77766655","Javier Rodríguez",777666555,"Contador Público. Especializado en auditoría y contabilidad financiera.","Calle Mayor 789","Barcelona","javier.rodriguez@example.com","javierr","clave789"
-"M99900011","Nuria Sánchez",999000111,"Ingeniera Ambiental. Especializada en gestión de residuos y conservación del medio ambiente.","Plaza España 123","Madrid","nuria.sanchez@example.com","nurias","contraseña123"
-"N12345678","Antonio Martínez",123456789,"Diseñador de Producto. Especializado en diseño de mobiliario y accesorios.","Avenida Diagonal 456","Valencia","antonio.martinez@example.com","antoniom","segura456"
-"O98765432","Eva López",987654321,"Psicoterapeuta. Especializada en terapia gestalt y mindfulness.","Calle Gran Vía 789","Barcelona","eva.lopez@example.com","eval","clave789"
-"P45678912","Pablo García",456789123,"Desarrollador Web. Experiencia en desarrollo front-end y back-end.","Paseo de Gracia 123","Madrid","pablo.garcia@example.com","pablog","contraseña123"
-"Q11122233","Lorena Rodríguez",111222333,"Médico Veterinario. Especializada en atención clínica de animales domésticos.","Plaza Mayor 456","Valencia","lorena.rodriguez@example.com","lorenar","segura456"
+dni,nombreCompleto,numeroSeguridadSocial,curriculum,direccion,ciudad,correoElectronico,nombreUsuario,contraseña,valoracion
+"12345678F","Juan Pérez",123456789,"Curriculum Juan Pérez","Calle Principal 123","Ciudad A","juan@example.com","juanperez","contraseña123",4
+"98765432R","María García",987654321,"Curriculum María García","Avenida Central 456","Ciudad B","maria@example.com","mariagarcia","maria123",5
+"45678912Y","Pedro López",456789123,"Curriculum Pedro López","Plaza Mayor 789","Ciudad C","pedro@example.com","pedrolopez","pedro456",3
+"78912345H","Ana Martínez",789123456,"Curriculum Ana Martínez","Paseo Secundario 321","Ciudad D","ana@example.com","anamartinez","ana789",4
+"32165498A","Luis Rodríguez",321654987,"Curriculum Luis Rodríguez","Ronda Norte 654","Ciudad E","luis@example.com","luisrodriguez","luis321",5
+"65498732D","Laura Sánchez",654987321,"Curriculum Laura Sánchez","Camino Viejo 987","Ciudad F","laura@example.com","laurasanchez","laura987",3
+"23456789G","Carlos Hernández",234567891,"Curriculum Carlos Hernández","Calle Nueva 234","Ciudad G","carlos@example.com","carloshernandez","carlos234",4
+"87654321I","Sara López",876543219,"Curriculum Sara López","Avenida Antigua 567","Ciudad H","sara@example.com","saralopez","sara876",5
+"56789123O","David Pérez",567891234,"Curriculum David Pérez","Plaza Vieja 891","Ciudad I","david@example.com","davidperez","david891",3
+"19876543W","Elena Rodríguez",198765432,"Curriculum Elena Rodríguez","Calle Mayor 198","Ciudad J","elena@example.com","elenarodriguez","elena198",4
