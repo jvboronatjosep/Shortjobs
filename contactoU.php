@@ -59,7 +59,7 @@
         $nombre = htmlspecialchars($_POST['nombre']);
         $email = htmlspecialchars($_POST['email']);
         $mensaje = htmlspecialchars($_POST['mensaje']);
-        $para = 'tu-email@dominio.com';
+        $para = 'ShortJobs@shortjobsprime.com';
         $asunto = 'Nuevo mensaje de contacto';
         
         $cuerpoMensaje = "Nombre: $nombre\nCorreo: $email\n\nMensaje:\n$mensaje";
