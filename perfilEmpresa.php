@@ -5,10 +5,9 @@ $confFile = "./conf.csv";
 $gestion = new Empresas($confFile);
 $trabajos = new Trabajos($confFile);
 
-// Validar y sanitizar la entrada del usuario
-$userName = isset($_POST['userName']) ? htmlspecialchars($_POST['userName']) : '';
+$userName = $_POST['userName'];
 
-// Obtener empresas y trabajos asociados al nombre de usuario
+
 $brandsObtained = $gestion->getEmpresas();
 $trabajoObstained = $trabajos->getTrabajosByEmpresa($userName);
 $nombres = $gestion->getEmpresaByName($userName);
