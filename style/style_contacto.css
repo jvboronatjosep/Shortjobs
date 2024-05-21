@@ -1,0 +1,182 @@
+body {
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: yellow;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Main Image */
+.img_principal img {
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Contact Form */
+.form-register {
+    width: 800px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    color: black;
+    box-shadow: 7px 13px 37px #000;
+    background-image: url('img/fondo_form.jpg');
+    background-attachment: fixed;
+    background-size: cover;      
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form-register label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    color: white;
+}
+
+.botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.botons:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.pie-pagina {
+    width: 100%;
+    background-color: black;
+}
+
+.pie-pagina .grupo-1 {
+    max-width: 4096px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.pie-pagina .Caja {
+    margin-left: 50px;
+}
+
+.pie-pagina .Caja img {
+    margin-left: 30px;
+    height: 100px;
+}
+
+.pie-pagina .Caja .Medio {
+    margin-left: 100px;
+}
+
+.pie-pagina .Caja h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .Caja p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #35322e;
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 50%;
+}
+
+.pie-pagina .red-social a:hover {
+    color: #E22636;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: white;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: Florida-font;
+    src: url('NavineDemo-SemiCondensed.ttf');
+}
+
+#enviar {
+    font-family: Verdana, Helvetica;
+    font-size: 12pt;
+    width: 500px;
+    color: #696969;
+    padding: 5px 7px;
+    border: 1px solid #0000FF;
+    background: #FFF;
+    border-radius: 15px;
+}
+
+#enviar:hover {
+    background-color: lightblue;
+    color: white;
+}
