@@ -1,5 +1,5 @@
 <?php
-require_once 'autoloader.php';
+require_once "autoloader.php";
 
 $confFile = "./conf.csv";
 $gestion = new Empresas($confFile);
@@ -19,7 +19,7 @@ $nombres = $gestion->getEmpresaByName($userName);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Empresa - ShortJobs</title>
-    <link rel="icon" href="img/LogoShortJobs.png" type="image/x-icon">
+    <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c154837196.js" crossorigin="anonymous"></script>
@@ -64,9 +64,8 @@ $nombres = $gestion->getEmpresaByName($userName);
                     <a class="nav-link text-white" href="Contacto.php">Contacto</a>
                 </li>
             </ul>
-            <div class="d-flex">
-                <a href="inicioSesionE.php" class="btn btn-light btn-lg me-3">Iniciar Sesión</a>
-                <a href="Empresa-Usuario.php" class="btn btn-light btn-lg">Registro</a>
+            <div>
+                <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
             </div>
         </div>
     </div>
@@ -104,33 +103,31 @@ $nombres = $gestion->getEmpresaByName($userName);
     </div>
 </div>
 
-<footer class="pie-pagina bg-dark text-light py-4 mt-5">
-    <div class="grupo-1 container">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo" width="200px"></a>
+<div class="contacto"><footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="Caja">
+        <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="" width="200px"></a>
+        </div>
+        <div class="Caja">
+            <div class="Medio">
+                <h2 id="contacto">Contacto:</h2>
+                <p>Telefono De Contacto:</p>
+                <p>☎️ 679 63 78 85</p>
             </div>
-            <div class="col-md-4">
-                <h2>Contacto:</h2>
-                <p>Teléfono De Contacto: ☎️ 679 63 78 85</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Síguenos:</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/floridauniversitaria" class="fa fa-facebook" aria-label="Facebook"></a>
-                    <a href="https://www.instagram.com/florida_uni/" class="fa fa-instagram" aria-label="Instagram"></a>
-                    <a href="https://twitter.com/floridauni" class="fa fa-twitter" aria-label="Twitter"></a>
-                    <a href="https://www.linkedin.com/school/florida-universitaria/?originalSubdomain=es" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-                    <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube" aria-label="YouTube"></a>
-                </div>
+        </div>
+        <div class="Caja">
+            <h2>Siguenos:</h2>
+            <div class="red-social">
+                <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
+                <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
+                <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
             </div>
         </div>
     </div>
-    <div class="grupo-2 container text-center mt-3">
+    <div class="grupo-2">
         <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
     </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+</footer></div>
 </html>
