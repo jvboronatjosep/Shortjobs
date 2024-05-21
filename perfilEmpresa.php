@@ -45,23 +45,20 @@ $nombres = $gestion->getEmpresaByName($userName);
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
     <div class="container-fluid">
-        <a class="navbar-brand" href="inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo"></a>
+        <a class="navbar-brand" href="inicioEmpresa.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo"></a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inicio.php">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="Trabajos.php">Mis Trabajos</a>
+                    <a class="nav-link text-white" href="inicioEmpresa.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="Destacadas.php">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Contacto.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
                 </li>
             </ul>
             <div>
