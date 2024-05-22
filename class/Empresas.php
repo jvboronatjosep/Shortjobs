@@ -92,6 +92,43 @@ class Empresas extends Conexion
         echo '  </div>';
         echo '</div>';
     }
+
+
+    public function empresastop() {
+        $conn = $this->connect();
+        $sql = "SELECT id, tema, nombre, sedes, AVG(valoracion) AS media FROM empresas GROUP BY id, nombre ORDER BY media DESC LIMIT 6";
+        $result = $conn->query($sql);
+        
+        $top_seis = array();
+        if ($num = $result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $top_seis[] = $row;
+            }
+        }
+        $conn->close();
+        
+        echo "<div class='container mt-5'>";
+        echo "<div class='row'>";
+        foreach ($top_seis as $empresa) {
+            echo "<div class='col-md-6 mb-4'>";
+            echo "<div class='card position-relative'>";
+            echo "<img src='ruta/a/la/imagen.jpg' class='position-absolute top-0 end-0' style='width: 50px;' alt='Imagen'>";
+            echo "<div class='card-body'>";
+            echo "<p class='card-title'>Tema: " . $empresa["tema"] . "</p>";
+            echo "<p class='card-text'>Nombre: " . $empresa["nombre"] . "</p>";
+            echo "<p class='card-text'>Sede: " . $empresa["sedes"] . "</p>";
+            echo "<p class='card-text'>Media valoracion: " . $empresa["media"] . "</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+        }
+        echo "</div>";
+        echo "</div>";
+        
+        return $top_cinco;
+    }
 }
+
+
 
 ?>

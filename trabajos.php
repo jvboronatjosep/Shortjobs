@@ -28,10 +28,10 @@ $order = $gestion->getCurrentOrder();
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
+                    <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white active" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Destacadas</a>
@@ -55,6 +55,17 @@ $order = $gestion->getCurrentOrder();
 
 <div class="container-fluid mt-5">
     <h3 class="text-center">Trabajos Disponibles</h3>
+
+    <div class="row justify-content-center mt-5 mb-3">
+            <div class="col-md-8 col-lg-6">
+                <form action="buscar.php" method="GET" class="d-flex">
+                    <input type="text" name="query" class="form-control me-2" placeholder="Buscar trabajos...">
+                    <button type="submit" class="btn btn-primary me-2">Buscar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">Filtros</button>
+                </form>
+            </div>
+    </div>
+
     <div class="row mb-5">
         <?php
             $gestion->drawTrabajosSinCrud($brandsObtained);

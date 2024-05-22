@@ -60,7 +60,7 @@ $trabajos = new Trabajos($confFile);
 <div>
     <?php
         $trabajos = new Trabajos($confFile);
-        $trabajos->trabajadoretop();
+        $trabajos->trabajadorestop();
     ?>
 </div>
 

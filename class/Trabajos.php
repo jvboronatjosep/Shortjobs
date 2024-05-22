@@ -173,13 +173,13 @@ public function drawDetalleSinCrud($trabajo)
     }
 
         
-    public function trabajadoretop() {
+    public function trabajadorestop() {
         $conn = $this->connect();
         $sql = "SELECT dni, nombreCompleto, numeroSeguridadSocial, curriculum, direccion, ciudad, correoElectronico, nombreUsuario, contraseña, AVG(valoracion) AS media FROM usuarios GROUP BY dni, nombreUsuario ORDER BY media DESC LIMIT 6";
         $result = $conn->query($sql);
         
         $top_cinco = array();
-        if ($num = $result->num_rows > 0) {
+        if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $top_cinco[] = $row;
             }
@@ -190,10 +190,10 @@ public function drawDetalleSinCrud($trabajo)
         echo "<div class='row'>";
         foreach ($top_cinco as $usuario) {
             echo "<div class='col-md-6 mb-4'>";
-            echo "<div class='card position-relative'>";
-            echo "<img src='ruta/a/la/imagen.jpg' class='position-absolute top-0 end-0' style='width: 50px;' alt='Imagen'>";
+            echo "<div class='card shadow-lg h-100 d-flex flex-column justify-content-between'>";
+            echo "<div>";
             echo "<div class='card-body'>";
-            echo "<p class='card-title'>Nombre completo: " . $usuario["nombreCompleto"] . "</p>";
+            echo "<h5 class='card-title'>Nombre completo: " . $usuario["nombreCompleto"] . "</h5>";
             echo "<p class='card-text'>Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "</p>";
             echo "<p class='card-text'>Curriculum: " . $usuario["curriculum"] . "</p>";
             echo "<p class='card-text'>Dirección: " . $usuario["direccion"] . "</p>";
@@ -204,6 +204,10 @@ public function drawDetalleSinCrud($trabajo)
             echo "<p class='card-text'>Media de valoración: " . $usuario["media"] . "</p>";
             echo "</div>";
             echo "</div>";
+            echo "<div>";
+            echo "<img src='ruta/a/la/imagen.jpg' class='mt-2 ms-auto' alt='Imagen' style='width: 50px;'>";
+            echo "</div>";
+            echo "</div>";
             echo "</div>";
         }
         echo "</div>";
@@ -211,6 +215,8 @@ public function drawDetalleSinCrud($trabajo)
         
         return $top_cinco;
     }
+    
+    
     
     
 
@@ -250,6 +256,8 @@ public function drawDetalleSinCrud($trabajo)
             echo '</div>';
         }
     }
+
+
     public function drawTrabajosSinCrud($trabajos) {
         $trabajos = $this->general();
         
@@ -257,22 +265,22 @@ public function drawDetalleSinCrud($trabajo)
             echo '<div class="container mt-5">';
             echo '  <div class="row justify-content-center">';
             foreach ($trabajos as $trabajo) {
-                echo '    <div class="col-md-4">';
-                echo '      <div class="card shadow" style="max-width: 900px;">';
+                echo '    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">';
+                echo '      <div class="card shadow" style="width: 100%;">';
                 echo '        <div class="row g-0">';
-                echo '          <div class="col-md-4">';
-                echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" width="400" height="400">';
+                echo '          <div class="col-4">';
+                echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" style="max-height: 150px; object-fit: cover;">';
                 echo '          </div>';
-                echo '          <div class="col-md-8">';
+                echo '          <div class="col-8">';
                 echo '            <div class="card-body">';
-                echo '              <h5 class="card-title">' . htmlspecialchars($trabajo['nombre']) . '</h5>';
-                echo '              <p class="card-text">' . htmlspecialchars($trabajo['descripcion']) . '</p>';
-                echo '              <p class="card-text">Tipo: ' . htmlspecialchars($trabajo['tipo']) . '</p>';
-                echo '              <p class="card-text">Empresa: ' . htmlspecialchars($trabajo['empresa']) . '</p>';
-                echo '              <p class="card-text">Ubicación: ' . htmlspecialchars($trabajo['ubicacion']) . '</p>';
-                echo '              <p class="card-text">Fecha: ' . htmlspecialchars($trabajo['fecha']) . '</p>';
-                echo '              <p class="card-text">Salario: ' . htmlspecialchars($trabajo['salario']) . '</p>';
-                echo '              <p class="card-text">Duración: ' . htmlspecialchars($trabajo['duracion']) . '</p>';
+                echo '              <h5 class="card-title">' . $trabajo['nombre'] . '</h5>';
+                echo '              <p class="card-text">' . $trabajo['descripcion'] . '</p>';
+                echo '              <p class="card-text">Tipo: ' . $trabajo['tipo'] . '</p>';
+                echo '              <p class="card-text">Empresa: ' . $trabajo['empresa'] . '</p>';
+                echo '              <p class="card-text">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+                echo '              <p class="card-text">Fecha: ' . $trabajo['fecha'] . '</p>';
+                echo '              <p class="card-text">Salario: ' . $trabajo['salario'] . '</p>';
+                echo '              <p class="card-text">Duración: ' . $trabajo['duracion'] . '</p>';
                 echo '              <a href="detalle.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-secondary me-2">Ver</a>';
                 echo '            </div>';
                 echo '          </div>';
@@ -284,6 +292,8 @@ public function drawDetalleSinCrud($trabajo)
             echo '</div>';
         }
     }
+    
+
 
     public function general() {
         $conn = new Conexion($this->confFile);
