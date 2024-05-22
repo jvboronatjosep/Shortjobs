@@ -3,6 +3,7 @@ require_once 'autoloader.php';
 $confFile = "./conf.csv";
 $gestion = new Trabajos($confFile);
 $brandsObtained = $gestion->getTrabajos();
+$order = $conn->getCurrentOrder();
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +64,7 @@ $brandsObtained = $gestion->getTrabajos();
         <div class="row mb-5">
             <?php
                 $gestion->drawTrabajos($brandsObtained);
+                $gestion->showNavigation();
             ?>
         </div>
     </div>
