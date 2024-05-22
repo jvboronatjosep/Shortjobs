@@ -37,14 +37,14 @@
                         <h2>Inicio de Sesión para Usuarios</h2>
                         <p>Bienvenido a ShortJobs</p>
                     </div>
-                    <form>
+                    <form action="perfilUsuario.php" method="post">
                         <div class="form-group">
                             <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Ingrese nombre de usuario" required>
                         </div>
                         <div class="form-group">
                             <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" placeholder="Ingrese su contraseña" required>
+                            <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                         <div class="form-footer">
