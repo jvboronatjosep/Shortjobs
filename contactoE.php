@@ -26,7 +26,7 @@
                     <a class="nav-link text-white" href="inicioEmpresa.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Trabajadores Destacados</a>
+                    <a class="nav-link text-white" href="trabajadoresDestacados.php" style="margin-right: 15px;">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white active" href="ContactoE.php" style="";">Contacto</a>
