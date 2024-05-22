@@ -174,13 +174,11 @@ nav a:hover {
 
 <body>
     <div class="container-fluid">
-       
         <div class="row">
             <?php
-              $gestion->drawTrabajos($brandsObtained);
+                $gestion->drawTrabajos($brandsObtained);
             ?>
         </div>
-      
     </div>
 </body>
 

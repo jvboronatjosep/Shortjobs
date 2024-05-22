@@ -1,3 +1,10 @@
+<?php
+require_once 'autoloader.php';
+$confFile = "./conf.csv";
+$gestion = new Trabajos($confFile);
+$brandsObtained = $gestion->getTrabajos();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,20 +46,21 @@
     
     <div>
         <div class="img_principal">
-            <img src="img/img_inicio_empresa.jpg" class="d-block w-100" alt="...">
+            <img src="img/TrabajoEmpresa.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
 
-    <div class="container-fluid py-5 d-flex justify-content-center align-items-center text-dark bg-light" style="height: 600px;">
+
+
+    <div class="container-fluid mt-5">
+        <h3 class="d-flex justify-cntent-center">Mis trabajos</h3>
         <div class="row">
-            <div class="col-sm-6 text-center">
-                <h3 class="fw-bold" style="font-size: 65px;">Empresa especializada <br> en unir talento <br> temporal con <br> trabajos flexibles</h3>
-            </div>
-            <div class="col-sm-6 text-start align-self-center">
-                <h5 class="text-justify" style="font-size: 30px;">Ofrecemos soluciones completas para trabajadores temporales y empresas, desde selección de talento hasta gestión de proyectos, adaptándonos al mercado laboral cambiante para garantizar el éxito. <br> <br><a href="">Leer más</a></h5>
-            </div>
+            <?php
+                $gestion->drawTrabajos($brandsObtained);
+            ?>
         </div>
     </div>
+
 
 </body>
 
