@@ -186,7 +186,7 @@ public function drawDetalleSinCrud($trabajo)
         }
         $conn->close();
         
-        echo "<div class='container mt-5'>";
+        echo "<div class='container mt-5 mb-5'>";
         echo "<div class='row'>";
         foreach ($top_cinco as $usuario) {
             echo "<div class='col-md-6 mb-4'>";
