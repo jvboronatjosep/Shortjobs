@@ -57,7 +57,7 @@ $order = $gestion->getCurrentOrder();
     <h3 class="text-center">Trabajos Disponibles</h3>
     <div class="row mb-5">
         <?php
-            $gestion->drawTrabajos($brandsObtained);
+            $gestion->drawTrabajosSinCrud($brandsObtained);
         ?>
     </div>
     <div class="d-flex justify-content-center my-4">

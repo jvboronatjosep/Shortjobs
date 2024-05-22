@@ -127,6 +127,31 @@ public function drawDetalle($trabajo)
     }
 }
 
+public function drawDetalleSinCrud($trabajo)
+{
+    if ($trabajo) {
+        echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
+        echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
+        echo '    <div style="padding: 20px; border-radius: 10px;">';
+        echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
+        echo '    </div>';
+        echo '  </div>';
+        echo '  <div class="col-md-6 px-5">';
+        echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
+        echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
+        echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
+        echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+        echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
+        echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
+        echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
+        echo '  </div>';
+        echo '</div>';
+    } else {
+        echo "Trabajo no encontrado.";
+    }
+}
+
 
     public function borrarUnTrabajo($id){
         $conn = $this->connect();
@@ -207,6 +232,40 @@ public function drawDetalle($trabajo)
                 echo '              <a href="formularioEditarTrabajo.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-primary me-2">Editar Trabajo</a>';
                 echo '              <a href="detalle.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-secondary me-2">Ver</a>';
                 echo '              <a href="borrarTrabajo.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-danger">Borrar</a>';
+                echo '            </div>';
+                echo '          </div>';
+                echo '        </div>';
+                echo '      </div>';
+                echo '    </div>';
+            }
+            echo '  </div>';
+            echo '</div>';
+        }
+    }
+    public function drawTrabajosSinCrud($trabajos) {
+        $trabajos = $this->general();
+        
+        if ($trabajos) {
+            echo '<div class="container mt-5">';
+            echo '  <div class="row justify-content-center">';
+            foreach ($trabajos as $trabajo) {
+                echo '    <div class="col-md-4">';
+                echo '      <div class="card shadow" style="max-width: 900px;">';
+                echo '        <div class="row g-0">';
+                echo '          <div class="col-md-4">';
+                echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" width="400" height="400">';
+                echo '          </div>';
+                echo '          <div class="col-md-8">';
+                echo '            <div class="card-body">';
+                echo '              <h5 class="card-title">' . htmlspecialchars($trabajo['nombre']) . '</h5>';
+                echo '              <p class="card-text">' . htmlspecialchars($trabajo['descripcion']) . '</p>';
+                echo '              <p class="card-text">Tipo: ' . htmlspecialchars($trabajo['tipo']) . '</p>';
+                echo '              <p class="card-text">Empresa: ' . htmlspecialchars($trabajo['empresa']) . '</p>';
+                echo '              <p class="card-text">Ubicación: ' . htmlspecialchars($trabajo['ubicacion']) . '</p>';
+                echo '              <p class="card-text">Fecha: ' . htmlspecialchars($trabajo['fecha']) . '</p>';
+                echo '              <p class="card-text">Salario: ' . htmlspecialchars($trabajo['salario']) . '</p>';
+                echo '              <p class="card-text">Duración: ' . htmlspecialchars($trabajo['duracion']) . '</p>';
+                echo '              <a href="detalle.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-secondary me-2">Ver</a>';
                 echo '            </div>';
                 echo '          </div>';
                 echo '        </div>';
