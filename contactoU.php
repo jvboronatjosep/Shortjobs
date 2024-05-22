@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - ShortJobs</title>
+    <title>Contacto - ShortJobs</title>
     <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c154837196.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/style_inicio_trabajador.css">
+    <link rel="stylesheet" href="style/style_contacto.css">
 </head>
-<body>
+<body  style=" background-color: #E0FFFF;">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
-        <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
+        <a class="navbar-brand" href="inicio.php">
+        <img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,8 +37,8 @@
                 </li>
             </ul>
         </div>
-        <div>
-                <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
+            <div>
+            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
             </div>
     </div>
 </nav>
@@ -45,22 +46,51 @@
     
     <div>
         <div class="img_principal">
-            <img src="img/img_inicio_trabajador.jpg" class="d-block w-100" alt="...">
+            <img src="img/img_inicio_contacto.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
 
-    <div class="container-fluid py-5 d-flex justify-content-center align-items-center text-dark bg-light" style="height: 600px;">
-        <div class="row">
-            <div class="col-sm-6 text-center">
-                <h3 class="fw-bold" style="font-size: 65px;">Plataforma especializada <br> en conectar <br> usuarios con <br> trabajos temporales</h3>
-            </div>
-            <div class="col-sm-6 text-start align-self-center">
-                <h5 class="text-justify" style="font-size: 24px;">Descubre una amplia variedad de trabajos temporales diseñados para ajustarse a tu estilo de vida. Con nuestra plataforma, encontrar oportunidades laborales flexibles es rápido y sencillo. Desde trabajos a tiempo parcial hasta proyectos freelance, estamos aquí para ayudarte a encontrar tu próximo desafío laboral.<br> <br><a href="">Leer más</a></h5>
-            </div>
 
-        </div>
-    </div>
+
+<div class="container w-100 mb-5">
+    <h2 class="mt-5 d-flex justify-content-center">Formulario de Contacto</h2>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre = htmlspecialchars($_POST['nombre']);
+        $email = htmlspecialchars($_POST['email']);
+        $mensaje = htmlspecialchars($_POST['mensaje']);
+        $para = 'ShortJobs@shortjobsprime.com';
+        $asunto = 'Nuevo mensaje de contacto';
+        
+        $cuerpoMensaje = "Nombre: $nombre\nCorreo: $email\n\nMensaje:\n$mensaje";
+        
+        $cabeceras = 'From: ' . $email . "\r\n" .
+        'Reply-To: ' . $email . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+        
+        if (mail($para, $asunto, $cuerpoMensaje, $cabeceras)) {
+            echo '<p class="success">Mensaje enviado correctamente.</p>';
+        } else {
+            echo '<p class="error">Error al enviar el mensaje. Inténtalo de nuevo más tarde.</p>';
+        }
+    }
+    ?>
+    <form class="form-register" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="controls" required>
+        
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" class="controls" required>
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" class="controls" required></textarea>
+        
+        <input type="submit" value="Enviar" class="botons">
+    </form>
+</div>
+
 </body>
+
 <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="Caja">

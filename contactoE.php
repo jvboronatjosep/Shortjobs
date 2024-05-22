@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - ShortJobs</title>
-    <link rel="icon" href="img/LogoShortJobs.png" type="image/x-icon">
+    <title>Contacto - ShortJobs</title>
+    <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c154837196.js" crossorigin="anonymous"></script>
@@ -22,23 +22,20 @@
 
 
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inicio.php" style="margin-right: 15px;">Inicio</a>
+                    <a class="nav-link text-white" href="inicioEmpresa.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white" href="Destacadas.php">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Calendario.php" style="margin-right: 15px;">Calendario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Destacadas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white active" href="Contacto.php" style="margin-right: 30px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
                 </li>
             </ul>
+            <div>
+                <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
+            </div>
         </div>
     </div>
 </nav>
@@ -59,7 +56,7 @@
         $nombre = htmlspecialchars($_POST['nombre']);
         $email = htmlspecialchars($_POST['email']);
         $mensaje = htmlspecialchars($_POST['mensaje']);
-        $para = 'tu-email@dominio.com'; // Cambia esto a tu dirección de correo electrónico
+        $para = 'ShortJobs@shortjobsprime.com';
         $asunto = 'Nuevo mensaje de contacto';
         
         $cuerpoMensaje = "Nombre: $nombre\nCorreo: $email\n\nMensaje:\n$mensaje";
@@ -75,9 +72,7 @@
         }
     }
     ?>
-    <form class="form-register" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <h4>Formulario de Registro</h4>
-        
+    <form class="form-register" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" class="controls" required>
         

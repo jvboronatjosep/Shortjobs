@@ -27,13 +27,19 @@
                     <a class="nav-link text-white active" href="inicio.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Mis Trabajos</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Contacto.php" style="margin-right: 30px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoE.php" style="margin-right: 30px;">Contacto</a>
                 </li>
             </ul>
         </div>
+        <div>
+            <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
+            </div>
     </div>
 </nav>
     
