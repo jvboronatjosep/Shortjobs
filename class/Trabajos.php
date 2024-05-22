@@ -3,6 +3,8 @@
 class Trabajos extends Conexion
 {
 
+    private $confFile;
+
     public function __construct($confFile)
     {
         parent::__construct($confFile);
@@ -260,17 +262,17 @@ public function drawDetalle($trabajo)
         $pagina_siguiente = $pagina_actual + 1;
 
         if ($pagina_actual > 1) {
-            echo '<a href="?page=1"><<</a> ';
-            echo '<a href="?page=' . $pagina_anterior . '"><-</a> ';
+            echo '<a href="?page=1">  <<  </a> ';
+            echo '<a href="?page=' . $pagina_anterior . '">  <-  </a> ';
         } else {
-            echo '<span><<</span> ';
-            echo '<span><-</span> ';
+            echo '<span> << </span> ';
+            echo '<span>‎ <-</span> ';
         }
 
         if ($pagina_actual == 1) {
-            echo '<strong>Inicio</strong> ';
+            echo '<strong> ‎ Inicio ‎  </strong> ';
         } else {
-            echo '<a href="?page=1">Inicio</a> ';
+            echo '<a href="?page=1">‎  Inicio ‎  </a> ';
         }
 
         for ($pagina = 2; $pagina < $total_paginas; $pagina++) {
@@ -282,17 +284,17 @@ public function drawDetalle($trabajo)
         }
 
         if ($pagina_actual == $total_paginas) {
-            echo '<strong>Fin</strong> ';
+            echo '<strong> Fin</strong> ';
         } else {
-            echo '<a href="?page=' . $total_paginas . '">Fin</a> ';
+            echo '<a href="?page=' . $total_paginas . '"> ‎ Fin ‎ </a> ';
         }
 
         if ($pagina_actual < $total_paginas) {
-            echo '<a href="?page=' . $pagina_siguiente . '">-></a> ';
-            echo '<a href="?page=' . $total_paginas . '">>></a> ';
+            echo '<a href="?page=' . $pagina_siguiente . '"> -> </a> ';
+            echo '<a href="?page=' . $total_paginas . '"> ‎ >> </a> ';
         } else {
             echo '<span>-></span> ';
-            echo '<span>>></span> ';
+            echo '<span> >> </span> ';
         }
 
         echo '</div>';

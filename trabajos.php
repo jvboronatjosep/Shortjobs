@@ -3,6 +3,7 @@ require_once 'autoloader.php';
 $confFile = "./conf.csv";
 $gestion = new Trabajos($confFile);
 $brandsObtained = $gestion->getTrabajos();
+$order = $gestion->getCurrentOrder();
 ?>
 
 <!DOCTYPE html>
