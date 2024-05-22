@@ -1,44 +1,49 @@
-<?php
+    <?php
 
-class Conexion {
-    private $host;
-    private $username;
-    private $password;
-    private $database;
+    class Conexion {
+        private $conn;
 
-    public function __construct($confFile) {
+        private $host;
+        private $username;
+        private $password;
+        private $database;
 
-        $config = $this->parseConfFile($confFile);
-        $this->host = $config['host'];
-        $this->username = $config['username'];
-        $this->password = $config['password'];
-        $this->database = $config['database'];
-    }
+        public function __construct($confFile) {
 
-    private function parseConfFile() {
-        $config = [];
-        if (($handle = fopen("./conf.csv", "r")) !== false) {
-            while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-                $config['host'] = $data[0];
-                $config['username'] = $data[1];
-                $config['password'] = $data[2];
-                $config['database'] = $data[3];
+            $config = $this->parseConfFile($confFile);
+            $this->host = $config['host'];
+            $this->username = $config['username'];
+            $this->password = $config['password'];
+            $this->database = $config['database'];
+            $this->conn = $this->connect();
+        }
+
+        private function parseConfFile() {
+            $config = [];
+            if (($handle = fopen("./conf.csv", "r")) !== false) {
+                while (($data = fgetcsv($handle, 1000, ",")) !== false) {
+                    $config['host'] = $data[0];
+                    $config['username'] = $data[1];
+                    $config['password'] = $data[2];
+                    $config['database'] = $data[3];
+                }
+                fclose($handle);
             }
-            fclose($handle);
+            return $config;
         }
-        return $config;
-    }
 
-    public function connect() {
+        public function connect() {
 
-        $conn = new mysqli($this->host, $this->username, $this->password, $this->database);
-        if ($conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
+            $conn = new mysqli($this->host, $this->username, $this->password, $this->database);
+            if ($conn->connect_error) {
+                die("Error de conexión: " . $conn->connect_error);
+            }
+            return $conn;
         }
-        return $conn;
+
+        public function getConn() {
+            return $this->conn;
+        }
     }
-}
-
-
 
 ?>
