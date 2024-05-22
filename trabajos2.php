@@ -53,8 +53,8 @@ $brandsObtained = $gestion->getTrabajos();
 
 
     <div class="container-fluid mt-5">
-        <h3 class="d-flex justify-cntent-center">Mis trabajos</h3>
-        <div class="row">
+        <h3 class="text-center">Mis trabajos</h3>
+        <div class="row mb-5">
             <?php
                 $gestion->drawTrabajos($brandsObtained);
             ?>

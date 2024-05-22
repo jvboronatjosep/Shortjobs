@@ -1,61 +1,63 @@
 .container-fluid {
     padding-right: 0;
     padding-left: 0;
-  }
-  
-  body {
-    font-family: Helvetica, Arial, sans-serif; 
-    background-color: white; 
-    color: black; 
 }
   
-  .nav-link {
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    margin: 0; /* Asegura que no haya márgenes por defecto */
+    padding: 0;
+}
+
+.nav-link {
     font-size: 18px;
-  }
-    
-  .carousel-image {
+}
+
+.carousel-image {
     height: 900px;
-    object-fit: cover; 
-  }
-  
-    .header-buttons {
+    object-fit: cover;
+}
+
+.header-buttons {
     display: flex;
-    align-items: center; 
-    }
-    
-    .header-buttons a.btn {
-    height: 50px; 
+    align-items: center;
+}
+
+.header-buttons a.btn {
+    height: 50px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
-    margin-right: 5px; 
-    }
+    margin-right: 5px;
+}
 
-    .navbar {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-    }
-    
-    .carousel-inner {
-      height: 100vh;
-    }
-    
-    .carousel-item img {
-      object-fit: cover;
-      height: 1100px;
-  }
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
 
-  
-  @font-face {
+.carousel-inner {
+    height: 100vh;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 1100px;
+}
+
+@font-face {
     font-family: Florida-font;
     src: url(NavineDemo-SemiCondensed.ttf);
 }
 
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+    margin: 0;
+    padding: 0;
     background-image: url(Fondo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -64,49 +66,36 @@ body{
     background-color: white;
 }
 
-
-/* Encabezado */
-
-
-
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-
-#enviar{
-    font-family:Verdana,Helvetica;
-    font-size:12pt;
+#enviar {
+    font-family: Verdana, Helvetica;
+    font-size: 12pt;
     width: 500px;
-    color:#696969;
-    padding: 5px 7px 5px 7px;
-    border:1px solid #0000FF;
-    background:#FFF;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
+    color: #696969;
+    padding: 5px 7px;
+    border: 1px solid #0000FF;
+    background: #FFF;
     border-radius: 15px;
 }
-.logo img{
+
+.logo img {
     margin-left: 30px;
     height: 100px;
 }
 
 .nav-item {
-  color: yellow;
+    color: yellow;
 }
 
-
-
 /* Botones */
-
-
 :root {
     --color: #d1cece;
     --font: Arial;
 }
-
-
 
 .wrapper {
     padding: 4rem 0;
@@ -130,9 +119,8 @@ body{
     font-size: 1.25rem;
 }
 
-.button:hover{
+.button:hover {
     color: #E22636;
-    
 }
 
 .button:before,
@@ -165,31 +153,27 @@ body{
 }
 
 #enviar:hover {
-  background-color: lightblue;
-  color: white;
+    background-color: lightblue;
+    color: white;
 }
 
-
-
-
-
-/* PIE DE PAGINA */
-.pie-pagina{
+/* Pie de página */
+.pie-pagina {
     width: 100%;
     background-color: black;
 }
 
-.pie-pagina .grupo-1{
+.pie-pagina .grupo-1 {
     width: 100%;
     max-width: 4096px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
-    padding: 45px 0px;
+    padding: 45px 0;
 }
 
-.pie-pagina .grupo-1 .Caja figure{
+.pie-pagina .grupo-1 .Caja figure {
     width: 100%;
     height: 100%;
     display: flex;
@@ -197,24 +181,24 @@ body{
     align-items: center;
 }
 
-.pie-pagina .grupo-1 .Caja figure img{
+.pie-pagina .grupo-1 .Caja figure img {
     width: 250px;
 }
 
-.pie-pagina .grupo-1 .Caja h2{
+.pie-pagina .grupo-1 .Caja h2 {
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
     font-family: Florida-font;
 }
 
-.pie-pagina .grupo-1 .Caja p{
+.pie-pagina .grupo-1 .Caja p {
     color: white;
     margin-bottom: 10px;
     font-family: Florida-font;
 }
 
-.pie-pagina .grupo-1 .red-social a{
+.pie-pagina .grupo-1 .red-social a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -228,26 +212,25 @@ body{
     border-radius: 50px;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover{
+.pie-pagina .grupo-1 .red-social a:hover {
     color: #E22636;
 }
 
-
-.pie-pagina .grupo-2{
+.pie-pagina .grupo-2 {
     background-color: white;
     padding: 15px 10px;
     text-align: center;
     color: black;
 }
 
-.pie-pagina .grupo-2 small{
+.pie-pagina .grupo-2 small {
     font-size: 15px;
 }
 
-.Caja{
+.Caja {
     margin-left: 50px;
 }
 
-.Caja .Medio{
+.Caja .Medio {
     margin-left: 100px;
 }
