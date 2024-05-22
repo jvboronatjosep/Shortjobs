@@ -161,25 +161,33 @@ public function drawDetalle($trabajo)
         }
         $conn->close();
         
-
-
+        echo "<div class='container mt-5'>";
+        echo "<div class='row'>";
         foreach ($top_cinco as $usuario) {
-            echo "DNI: " . $usuario["dni"] . "<br>";
-            echo "Nombre completo: " . $usuario["nombreCompleto"] . "<br>";
-            echo "Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "<br>";
-            echo "Curriculum: " . $usuario["curriculum"] . "<br>";
-            echo "Dirección: " . $usuario["direccion"] . "<br>";
-            echo "Ciudad: " . $usuario["ciudad"] . "<br>";
-            echo "Correo electrónico: " . $usuario["correoElectronico"] . "<br>";
-            echo "Nombre de usuario: " . $usuario["nombreUsuario"] . "<br>";
-            echo "Contraseña: " . $usuario["contraseña"] . "<br>";
-            echo "Media de valoración: " . $usuario["media"] . "<br>";
-            echo "<br>";
+            echo "<div class='col-md-6 mb-4'>";
+            echo "<div class='card position-relative'>";
+            echo "<img src='ruta/a/la/imagen.jpg' class='position-absolute top-0 end-0' style='width: 50px;' alt='Imagen'>";
+            echo "<div class='card-body'>";
+            echo "<p class='card-title'>Nombre completo: " . $usuario["nombreCompleto"] . "</p>";
+            echo "<p class='card-text'>Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "</p>";
+            echo "<p class='card-text'>Curriculum: " . $usuario["curriculum"] . "</p>";
+            echo "<p class='card-text'>Dirección: " . $usuario["direccion"] . "</p>";
+            echo "<p class='card-text'>Ciudad: " . $usuario["ciudad"] . "</p>";
+            echo "<p class='card-text'>Correo electrónico: " . $usuario["correoElectronico"] . "</p>";
+            echo "<p class='card-text'>Nombre de usuario: " . $usuario["nombreUsuario"] . "</p>";
+            echo "<p class='card-text'>Contraseña: " . $usuario["contraseña"] . "</p>";
+            echo "<p class='card-text'>Media de valoración: " . $usuario["media"] . "</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
         }
+        echo "</div>";
+        echo "</div>";
         
         return $top_cinco;
-        
     }
+    
+    
 
     public function drawTrabajos($trabajos) {
         $trabajos = $this->general();
