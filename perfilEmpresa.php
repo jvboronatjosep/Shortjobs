@@ -56,7 +56,7 @@ $nombres = $gestion->getEmpresaByName($userName);
                     <a class="nav-link text-white" href="inicioEmpresa.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php">Trabajadores Destacados</a>
+                    <a class="nav-link text-white" href="trabajadoresDestacados.php">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
