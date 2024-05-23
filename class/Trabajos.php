@@ -257,7 +257,6 @@ class Trabajos extends Conexion
 
     }
 
-
     public function drawTrabajosSinCrud($trabajos)
     {
        

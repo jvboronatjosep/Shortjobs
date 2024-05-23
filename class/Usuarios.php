@@ -69,7 +69,7 @@ class Usuarios extends Conexion
             echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
             echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
             echo '    <div style="padding: 20px; border-radius: 10px;">';
-            echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+            echo '      <img src="img/pruebaFotoDatosUsuario.png"  class="img-fluid rounded" width="400" height="400">';
             echo '    </div>';
             echo '  </div>';
             echo '  <div class="col-md-6 px-5">';
