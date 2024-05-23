@@ -47,7 +47,7 @@ $trabajos = new Trabajos($confFile);
                 </li>
             </ul>
         <div>
-            <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
+            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
         </div>
         </div>
     </div>

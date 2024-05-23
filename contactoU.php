@@ -26,17 +26,17 @@
                     <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white" href="trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="ContactoE.php">Contacto</a>
+                    <a class="nav-link text-white active" href="ContactoU.php">Contacto</a>
                 </li>
             </ul>
         <div>
-            <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
+            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
         </div>
         </div>
     </div>
