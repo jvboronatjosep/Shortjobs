@@ -86,7 +86,7 @@ $nombre = $gestion->getUserByName($userName);
 
     <div class="row">
         <div class="col-12 text-center mb-4">
-            <img src="img/pruebaLogoEmpresa.png" alt="Logo de la Empresa" class="img-fluid" style="max-height: 200px;">
+            <img src="img/fotoPerfilUsuarioPrueba.jpg" alt="foto perfil usuario" class="img-fluid" style="max-height: 200px;">
         </div>
     </div>
     
