@@ -3,10 +3,12 @@ class Security extends Conexion
 {
     private $loginPageUser = "inicioSesionU.php";
     private $loginPageEmpresa = "inicioSesionE.php";
-    private $homePage = "inicioTrabajador.php";
+    private $homePageUser = "inicioTrabajador.php";
+    private $homePageEmpresas = "inicioEmpresa.php";
     public function __construct()
     {
         parent::__construct();
+        session_start();
        
     }
 
@@ -17,7 +19,7 @@ class Security extends Conexion
         }
     }
 
-    public function doLogin()
+    public function doLoginUser()
     {
         if (count($_POST) > 0) {
             
@@ -35,11 +37,30 @@ class Security extends Conexion
         }
     }
 
+    public function doLoginEmpresa()
+    {
+        if (count($_POST) > 0) {
+            
+            
+            $comp = $this->getEmpresa($_POST["empresaName"]);
+            $_SESSION["loggedIn"] = $this->checkEmpresa($comp, $_POST["empresaPassword"]) ? $comp["nombre"] : false;
+            if ($_SESSION["loggedIn"]) {
+                $this->redirectEmpresa();
+            } else {
+                return "Incorrect User Name or Password";
+            }
+            
+        } else {
+            return null;
+        }
+    }
+
     public function redirectUser(){
-        
-            # code...
-            header("Location: inicioTrabajador.php");
-        
+        header("Location: inicioTrabajador.php");
+    }
+
+    public function redirectEmpresa(){
+        header("Location: inicioEmpresa.php");
     }
 
     public function getUserData(){
@@ -51,16 +72,32 @@ class Security extends Conexion
     private function checkUser($user, $userPassword)
     {
         if ($user) {
-            return $this->checkPassword($user["contraseña"], $userPassword);
+            return $this->checkPasswordUser($user["contraseña"], $userPassword);
            
         } else {
             return false;
         }
     }
 
-    private function checkPassword($securePassword, $userPassword)
+    private function checkEmpresa($comp, $empresaPassword)
+    {
+        if ($comp) {
+            return $this->checkPasswordEmpresa($comp["contraseña"], $empresaPassword);
+           
+        } else {
+            return false;
+        }
+    }
+
+    private function checkPasswordUser($securePassword, $userPassword)
     {
         return ($userPassword == $securePassword);
+        //return ($userPassword === $securePassword);
+    }
+
+    private function checkPasswordEmpresa($securePassword, $empresaPassword)
+    {
+        return ($empresaPassword == $securePassword);
         //return ($userPassword === $securePassword);
     }
 
@@ -74,10 +111,11 @@ class Security extends Conexion
             return false;
         }
     }
-    private function getEmprese($empresaName)
+
+    private function getEmpresa($empresaName)
     {
         $sql = "SELECT * FROM empresas WHERE nombre = '$empresaName'";
-        $result =  parent::conn->query($sql);
+        $result = $this->conn->query($sql);
         if ($result->num_rows > 0) {
             return $result->fetch_assoc();
         } else {
