@@ -57,19 +57,22 @@ class Trabajos extends Conexion
             $trabajo = $result->fetch_assoc();
         }
         return $trabajo;
+  
     }
-    public function getTrabajoByName($userName)
+
+    public function getTrabajoByNombre($nombre)
     {
         $conn = $this->connect();
-        $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
+        $sql = "SELECT * FROM trabajos WHERE nombre = '$nombre'";
         $result = $conn->query($sql);
         $trabajo = null;
         if ($result->num_rows > 0) {
             $trabajo = $result->fetch_assoc();
         }
-        $conn->close();
         return $trabajo;
+  
     }
+ 
 
     public function drawTrabajo($trabajo)
     {
