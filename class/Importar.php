@@ -1,5 +1,4 @@
 <?php
-
 require_once "autoloader.php";
 
 class Importar extends Conexion
@@ -18,9 +17,10 @@ class Importar extends Conexion
                 $tema = $data[1];
                 $nombre = $data[2];
                 $sedes = $data[3];
-                $valoracionE = $data[4];
+                $contraseña = $data[4];
+                $valoracionE = $data[5];
                 
-                $sql = "INSERT INTO empresas (tema, nombre, sedes, valoracion) VALUES ('$tema', '$nombre', '$sedes', '$valoracionE')";
+                $sql = "INSERT INTO empresas (tema, nombre, sedes, contraseña, valoracion) VALUES ('$tema', '$nombre', '$sedes','$contraseña', '$valoracionE')";
                 if (!$conn->query($sql)) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

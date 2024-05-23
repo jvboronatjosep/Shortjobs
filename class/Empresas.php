@@ -1,6 +1,4 @@
 <?php
-
-
 require_once "autoloader.php";
 class Empresas extends Conexion
 {

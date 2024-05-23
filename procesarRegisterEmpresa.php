@@ -1,4 +1,5 @@
 <?php
+header ("Location: empresa-usuario.php");
 require_once 'autoloader.php';
 
 $conexion = new Conexion('./conf.csv');
@@ -17,10 +18,10 @@ if ($stmt === false) {
     die("Error en la preparación de la consulta: " . $conn->error);
 }
 
-$stmt->bind_param("sss", $tema, $nombre, $sedes, $contraseña);
+$stmt->bind_param("ssss", $tema, $nombre, $sedes, $contraseña);
 
 if ($stmt->execute()) {
-    header ("Location:empresa-usuario.php");
+    
 } else {
     echo "Error: " . $stmt->error;
 }

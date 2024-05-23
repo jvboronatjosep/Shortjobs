@@ -1,4 +1,5 @@
 <?php
+header("Location: empresa-usuario.php");
 require_once 'autoloader.php';
 
 
@@ -31,7 +32,7 @@ $stmt->bind_param("ssissssss", $dni, $nombreCompleto, $numeroSeguridadSocial, $c
 
 
 if ($stmt->execute()) {
-    header("Location: empresa-usuario.php");
+    
 } else {
     echo "Error: " . $stmt->error;
 }
