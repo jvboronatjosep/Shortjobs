@@ -24,10 +24,10 @@ class Usuarios extends Conexion
     }
 
 
-    public function getUsuarioById($dni)
+    public function getUsuarioById($userName)
     {
         $conn = $this->connect();
-        $sql = "SELECT * FROM usuarios WHERE dni = '$dni'";
+        $sql = "SELECT * FROM usuarios WHERE dni = '$userName'";
         $result = $conn->query($sql);
         $trabajo = null;
         if ($result->num_rows > 0) {
@@ -36,10 +36,10 @@ class Usuarios extends Conexion
         return $trabajo;
     }
 
-    public function getUSerByDNI($dni)
+    public function getUSerByDNI($userName)
     {
         $conn = $this->connect();
-        $sql = "SELECT dni FROM usuarios WHERE dni = '$dni'";
+        $sql = "SELECT dni FROM usuarios WHERE nombreCompleto = '$userName'";
         $result = $conn->query($sql);
         $nombre = null;
         if ($result->num_rows > 0) {

@@ -94,7 +94,7 @@ $nombres = $gestion->getUSerByDNI($userName);
 
     <div class="row">
        <?php
-        $gestion->drawUsers($datosUsuarios);
+        $gestion->drawUsers($nombres);
         ?>
     </div>
 </div>
