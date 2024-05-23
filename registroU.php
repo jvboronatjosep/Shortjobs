@@ -36,8 +36,28 @@
                             <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo" required>
                         </div>
                         <div class="form-group">
-                            <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
+                            <label for="dni">DNI</label>
+                            <input type="dni" class="form-control" id="dni" placeholder="Ingrese su DNI" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroSeguridadSocial">Numero de la Seguridad Social</label>
+                            <input type="numeroSeguridadSocial" class="form-control" id="numeroSeguridadSocial" placeholder="Ingrese su numero de la Seguridad Social" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="curriculum">Curriculum</label>
+                            <input type="curriculum" class="form-control" id="curriculum" placeholder="Ingrese su curriculum" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">direccion</label>
+                            <input type="direccion" class="form-control" id="direccion" placeholder="Ingrese su direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="ciudad" class="form-control" id="ciudad" placeholder="Ingrese su ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correoElectronico">Correo Electronico</label>
+                            <input type="correoElectronico" class="form-control" id="correoElectronico" placeholder="Ingrese su Correo Electronico" required>
                         </div>
                         <div class="form-group">
                             <label for="userPassword">Contraseña</label>

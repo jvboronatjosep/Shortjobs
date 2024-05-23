@@ -36,10 +36,6 @@
                             <input type="text" class="form-control" id="companyName" placeholder="Ingrese el nombre de su empresa" required>
                         </div>
                         <div class="form-group">
-                            <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
-                        </div>
-                        <div class="form-group">
                             <label for="tema">Tema</label>
                             <input type="tema" class="form-control" id="tema" placeholder="Ingrese el tema de la empresa" required>
                         </div>
