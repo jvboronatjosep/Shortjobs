@@ -1,12 +1,13 @@
 <?php
 class Security extends Conexion
 {
-    private $loginPage = "login.php";
-    private $homePage = "index.php";
+    private $loginPageUser = "inicioSesionU.php";
+    private $loginPageEmpresa = "inicioSesionE.php";
+    private $homePage = "inicioTrabajador.php";
     public function __construct()
     {
         parent::__construct();
-        session_start();
+       
     }
 
     public function checkLoggedIn()
@@ -19,16 +20,26 @@ class Security extends Conexion
     public function doLogin()
     {
         if (count($_POST) > 0) {
+            
+            
             $user = $this->getUser($_POST["userName"]);
-            $_SESSION["loggedIn"] = $this->checkUser($user, $_POST["userPassword"]) ? $user["userName"] : false;
+            $_SESSION["loggedIn"] = $this->checkUser($user, $_POST["userPassword"]) ? $user["nombreUsuario"] : false;
             if ($_SESSION["loggedIn"]) {
-                header("Location: " . $this->homePage);
+                $this->redirectUser();
             } else {
                 return "Incorrect User Name or Password";
             }
+            
         } else {
             return null;
         }
+    }
+
+    public function redirectUser(){
+        
+            # code...
+            header("Location: inicioTrabajador.php");
+        
     }
 
     public function getUserData(){
@@ -40,8 +51,8 @@ class Security extends Conexion
     private function checkUser($user, $userPassword)
     {
         if ($user) {
-            //return $this->checkPassword($user["userPassword"], $userPassword);
-            return $this->checkPassword($user["securePassword"], $userPassword);
+            return $this->checkPassword($user["contraseña"], $userPassword);
+           
         } else {
             return false;
         }
@@ -49,14 +60,24 @@ class Security extends Conexion
 
     private function checkPassword($securePassword, $userPassword)
     {
-        return password_verify($userPassword, $securePassword);
+        return ($userPassword == $securePassword);
         //return ($userPassword === $securePassword);
     }
 
     private function getUser($userName)
     {
-        $sql = "SELECT * FROM users WHERE userName = '$userName'";
+        $sql = "SELECT * FROM usuarios WHERE nombreUsuario = '$userName'";
         $result = $this->conn->query($sql);
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return false;
+        }
+    }
+    private function getEmprese($empresaName)
+    {
+        $sql = "SELECT * FROM empresas WHERE nombre = '$empresaName'";
+        $result =  parent::conn->query($sql);
         if ($result->num_rows > 0) {
             return $result->fetch_assoc();
         } else {

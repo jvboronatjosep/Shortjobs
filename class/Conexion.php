@@ -1,15 +1,15 @@
-    <?php
+<?php
     class Conexion {
-        private $conn;
+        public $conn;
 
         private $host;
         private $username;
         private $password;
         private $database;
 
-        public function __construct($confFile) {
+        public function __construct() {
 
-            $config = $this->parseConfFile($confFile);
+            $config = $this->parseConfFile();
             $this->host = $config['host'];
             $this->username = $config['username'];
             $this->password = $config['password'];
