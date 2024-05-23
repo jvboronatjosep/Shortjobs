@@ -7,7 +7,7 @@ $gestion = new Trabajos("./conf.csv");
 // Verifica si se envió el parámetro 'query' (nombre de la empresa)
 if(isset($_GET['query'])) {
     // Limpia y sanitiza el nombre de la empresa buscada
-    $empresa = filter_var($_GET['query'], FILTER_SANITIZE_STRING);
+    $empresa = filter_var($_GET['query'], FILTER_SANITIZE_SPECIAL_CHARS);
     
     // Obtén el trabajo correspondiente a la empresa buscada
     $trabajo = $gestion->getTrabajosByEmpresa($empresa);
