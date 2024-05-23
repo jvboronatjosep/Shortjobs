@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Empresa - ShortJobs</title>
+    <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .register-container {
@@ -30,24 +31,20 @@
                         <h2>Registro de Empresa</h2>
                         <p>Por favor, complete el siguiente formulario para registrar su empresa en ShortJobs</p>
                     </div>
-                    <form>
-                        <div class="form-group">
-                            <label for="companyName">Nombre de la Empresa</label>
-                            <input type="text" class="form-control" id="companyName" placeholder="Ingrese el nombre de su empresa" required>
-                        </div>
+                    <form action="procesarRegisterEmpresa.php" method="post">
                         <div class="form-group">
                             <label for="tema">Tema</label>
-                            <input type="tema" class="form-control" id="tema" placeholder="Ingrese el tema de la empresa" required>
+                            <input type="text" class="form-control" id="tema" name="tema" placeholder="Ingrese el tema de la empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de la empresa" required>
                         </div>
                         <div class="form-group">
                             <label for="sedes">Sedes</label>
-                            <input type="sedes" class="form-control" id="sedes" placeholder="Ingrese las sedes" required>
+                            <input type="text" class="form-control" id="sedes" name="sedes" placeholder="Ingrese las sedes de la empresa" required>
                         </div>
-                        <div class="form-group">
-                            <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" placeholder="Ingrese su contraseña" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                        <button type="submit" class="btn btn-primary btn-block">Registrar Empresa</button>
                     </form>
                 </div>
             </div>
