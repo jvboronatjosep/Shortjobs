@@ -34,7 +34,7 @@ $trabajos = new Trabajos($confFile);
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inicioTrabajos.php" style="margin-right: 15px;">Inicio</a>
+                    <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="trabajos.php" style="margin-right: 15px;">Trabajos</a>
