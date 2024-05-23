@@ -56,11 +56,23 @@ $order = $gestion->getCurrentOrder();
 
 <div class="container-fluid mt-5">
     <h3 class="text-center">Trabajos Disponibles</h3>
+    <?php
+            $trabajos = new Trabajos();
+            $filtro = '';
+
+            if (isset($_GET['query']))
+            {
+                $filtro = $_GET['query'];
+            }
+
+            $filtro_consulta = $trabajos->getFiltro($filtro);
+        ?>
 
     <div class="row justify-content-center mt-5 mb-3">
             <div class="col-md-8 col-lg-6">
-                <form action="buscar.php" method="GET" class="d-flex">
-                    <input type="text" name="query" class="form-control me-2" placeholder="Buscar trabajos...">
+                <form action="trabajos.php" method="GET" class="d-flex">
+                    <input type="text" name="query" class="form-control me-2" value="<?php echo $filtro?>" placeholder="Buscar trabajos...">
+
                     <button type="submit" class="btn btn-primary me-2">Buscar</button>
                     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">Filtros</button>
                 </form>
@@ -68,13 +80,14 @@ $order = $gestion->getCurrentOrder();
     </div>
 
     <div class="row mb-5">
-        <?php
-            $gestion->drawTrabajosSinCrud($brandsObtained);
+        <?php           
+            $trabajos->drawTrabajosSinCrud( $filtro_consulta);
         ?>
     </div>
     <div class="d-flex justify-content-center my-4">
         <?php
-            $gestion->showNavigation();
+
+            $trabajos->showNavigation($filtro_consulta);
         ?>
     </div>
 </div>

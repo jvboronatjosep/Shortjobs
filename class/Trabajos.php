@@ -4,10 +4,10 @@ class Trabajos extends Conexion
 
     private $confFile;
 
-    public function __construct($confFile)
+    /*public function __construct($confFile)
     {
         parent::__construct($confFile);
-    }
+    }*/
 
     public function getTrabajos()
     {
@@ -71,6 +71,43 @@ class Trabajos extends Conexion
         }
         return $trabajo;
   
+    }
+
+    public function getTrabajoByNombreODescripción($filtro)
+    {
+        $conn = $this->connect();
+
+        
+
+        if ($filtro != '') {
+            $sql = "SELECT * FROM trabajos WHERE nombre like '%$filtro%' OR descripcion like '%$filtro%'";
+        }
+        else
+        {
+            $sql = "SELECT * FROM trabajos";
+        }
+
+        echo $sql;
+        $result = $conn->query($sql);
+        $trabajadores = $result->fetch_all(MYSQLI_ASSOC);
+
+
+        return $trabajadores;
+  
+    }
+
+    public function getFiltro($filtro)
+    {         
+
+        if ($filtro != '') {
+            $sql = "WHERE nombre like '%$filtro%' OR descripcion like '%$filtro%'";
+        }
+        else
+        {
+            $sql = "";
+        }
+        
+        return $sql;  
     }
  
 
@@ -260,9 +297,9 @@ class Trabajos extends Conexion
     }
 
 
-    public function drawTrabajosSinCrud($trabajos)
+    public function drawTrabajosSinCrud($filtro = '')
     {
-        $trabajos = $this->general();
+        $trabajos = $this->general($filtro);
 
         if ($trabajos) {
             echo '<div class="container mt-5">';
@@ -298,7 +335,7 @@ class Trabajos extends Conexion
 
 
 
-    public function general()
+    public function general($filtro ='')
     {
         $conn = new Conexion($this->confFile);
         $data = $conn->getConn();
@@ -310,7 +347,7 @@ class Trabajos extends Conexion
 
         $order = $this->getCurrentOrder();
 
-        $cervezas = "SELECT * FROM trabajos ORDER BY {$order['field']} {$order['direction']} LIMIT $inicio, $resultados_por_pagina";
+        $cervezas = "SELECT * FROM trabajos ".$filtro."ORDER BY {$order['field']} {$order['direction']} LIMIT $inicio, $resultados_por_pagina";
         $resultado = mysqli_query($data, $cervezas);
         $datos = [];
         if (mysqli_num_rows($resultado) > 0) {
@@ -318,12 +355,12 @@ class Trabajos extends Conexion
                 $datos[] = $fila;
             }
         } else {
-            echo "Error";
+            //echo "Error";
         }
         return $datos;
     }
 
-    public function showNavigation()
+    public function showNavigation($filtro = '')
     {
         $conn = new Conexion($this->confFile);
         $data = $conn->getConn();
@@ -332,12 +369,15 @@ class Trabajos extends Conexion
 
         $resultados_por_pagina = 6;
 
-        $total_registros_query = "SELECT COUNT(*) AS total FROM trabajos";
+        $total_registros_query = "SELECT COUNT(*) AS total FROM trabajos ". $filtro; 
+
+
         $total_registros_resultado = mysqli_query($data, $total_registros_query);
         $total_registros_fila = mysqli_fetch_assoc($total_registros_resultado);
         $total_registros = $total_registros_fila['total'];
         $total_paginas = ceil($total_registros / $resultados_por_pagina);
 
+        if ($total_registros>0) {
         echo '<div class="pagination">';
 
         $pagina_anterior = $pagina_actual - 1;
@@ -380,6 +420,11 @@ class Trabajos extends Conexion
         }
 
         echo '</div>';
+        }
+        else {
+            echo "No hay ningún trabajo con ese criterio de búsqueda";
+        }
+
     }
 
     public function getCurrentPage()
