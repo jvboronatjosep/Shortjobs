@@ -34,7 +34,7 @@ $order = $gestion->getCurrentOrder();
                     <a class="nav-link text-white active" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Destacadas</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 30px;">Contacto</a>
