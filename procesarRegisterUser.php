@@ -17,7 +17,6 @@ $nombreUsuario = $_POST['nombreUsuario'];
 $contraseña = $_POST['contraseña'];
 
 
-$contraseñaHasheada = password_hash($contraseña, PASSWORD_DEFAULT);
 
 
 $sql = "INSERT INTO usuarios (dni, nombreCompleto, numeroSeguridadSocial, curriculum, direccion, ciudad, correoElectronico, nombreUsuario, contraseña, valoracion)
@@ -28,7 +27,7 @@ if ($stmt === false) {
     die("Error en la preparación de la consulta: " . $conn->error);
 }
 
-$stmt->bind_param("ssissssss", $dni, $nombreCompleto, $numeroSeguridadSocial, $curriculum, $direccion, $ciudad, $correoElectronico, $nombreUsuario, $contraseñaHasheada);
+$stmt->bind_param("ssissssss", $dni, $nombreCompleto, $numeroSeguridadSocial, $curriculum, $direccion, $ciudad, $correoElectronico, $nombreUsuario, $contraseña);
 
 
 if ($stmt->execute()) {

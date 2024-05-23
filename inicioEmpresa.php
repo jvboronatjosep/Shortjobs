@@ -30,7 +30,7 @@
                     <a class="nav-link text-white" href="trabajadoresDestacados.php" style="margin-right: 15px;">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoE.php" style="";">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
                 </li>
             </ul>
         <div>

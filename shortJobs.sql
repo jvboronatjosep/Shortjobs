@@ -26,6 +26,7 @@ create table empresas(
     tema varchar (100),
     nombre varchar (50),
     sedes varchar (255),
+    contraseña varchar(20),
     valoracion INT CHECK (valoracion BETWEEN 1 AND 5)
 );
 
