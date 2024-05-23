@@ -222,8 +222,7 @@ class Trabajos extends Conexion
 
 
 
-    public function drawTrabajos($trabajos)
-
+    public function drawTrabajos($trabajos){
 
         echo '<div class="container mt-5">';
         echo '  <div class="row justify-content-center">';
@@ -261,9 +260,9 @@ class Trabajos extends Conexion
 
     public function drawTrabajosSinCrud($trabajos)
     {
-        $trabajos = $this->general();
+       
 
-        if ($trabajos) {
+        
             echo '<div class="container mt-5">';
             echo '  <div class="row justify-content-center">';
             foreach ($trabajos as $trabajo) {

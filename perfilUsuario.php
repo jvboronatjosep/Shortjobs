@@ -9,8 +9,8 @@ $userName = $_POST['userName'];
 
 
 $datosUsuarios = $gestion->getUsuarios();
-$nombres = $gestion->getUSerByDNI($userName);
-
+$nombres = $gestion->getUsuarioById($userName);
+$nombre = $gestion->getUserByName($userName);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -75,7 +75,7 @@ $nombres = $gestion->getUSerByDNI($userName);
         <div class="col-12 text-center mb-4">
             <?php
             if ($nombres) {
-                $gestion->drawNombreUser($nombres);
+                $gestion->drawNombreUser($nombre);
             } else {
                 echo "<p>No se encontraron empresas asociadas al usuario.</p>";
             }
@@ -90,7 +90,7 @@ $nombres = $gestion->getUSerByDNI($userName);
         </div>
     </div>
     
-    <a href="formularioCrearTrabajo.php" class="btn btn-primary mb-4">Publicar Oferta</a>
+
 
     <div class="row">
        <?php
