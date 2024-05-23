@@ -24,19 +24,19 @@ class Trabajos extends Conexion
         return $jobs;
     }
     public function getTrabajosByEmpresa($empresa)
-{
-    $conn = $this->connect();
-    $sql = "SELECT * FROM trabajos WHERE empresa = '$empresa'";
-    $result = $conn->query($sql);
-    $trabajos = [];
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $trabajos[] = $row;
+    {
+        $conn = $this->connect();
+        $sql = "SELECT * FROM trabajos WHERE empresa = '$empresa'";
+        $result = $conn->query($sql);
+        $trabajos = [];
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $trabajos[] = $row;
+            }
         }
+        $conn->close();
+        return $trabajos;
     }
-    $conn->close();
-    return $trabajos;
-}
 
     public function editarTrabajo($id, $nombre, $descripcion, $tipo, $empresa, $ubicacion, $fecha, $duracion)
     {
@@ -53,82 +53,108 @@ class Trabajos extends Conexion
         $conn = $this->connect();
         $sql = "SELECT * FROM trabajos WHERE id = '$id'";
         $result = $conn->query($sql);
-        $trabajo = null; 
+        $trabajo = null;
         if ($result->num_rows > 0) {
-            $trabajo = $result->fetch_assoc(); 
+            $trabajo = $result->fetch_assoc();
         }
         return $trabajo;
     }
     public function getTrabajoByName($userName)
-{
-    $conn = $this->connect();
-    $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
-    $result = $conn->query($sql);
-    $trabajo = null;
-    if ($result->num_rows > 0) {
-        $trabajo = $result->fetch_assoc();
+    {
+        $conn = $this->connect();
+        $sql = "SELECT * FROM trabajos WHERE nombre = '$userName'";
+        $result = $conn->query($sql);
+        $trabajo = null;
+        if ($result->num_rows > 0) {
+            $trabajo = $result->fetch_assoc();
+        }
+        $conn->close();
+        return $trabajo;
     }
-    $conn->close();
-    return $trabajo;
-}
 
-public function drawTrabajo($trabajo)
-{
-    if ($trabajo) {
-        echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
-        echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
-        echo '    <div style="padding: 20px; border-radius: 10px;">';
-        echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
-        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
-        echo '    </div>';
-        echo '  </div>';
-        echo '  <div class="col-md-6 px-5">';
-        echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
-        echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
-        echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
-        echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
-        echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
-        echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
-        echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
-        echo "<a href='formularioEditarTrabajo.php?id=" . $trabajo['id'] . "'><button>Editar Trabajo </button></a>";
-        echo "<a href='detalle.php?id=" . $trabajo['id'] . "'><button>Ver</button></a>";
-        echo "<a href='borrarTrabajo.php?id=" . $trabajo['id'] . "'><button>Borrar</button></a>";
-        echo '  </div>';
-        echo '</div>';
-    } else {
-        echo "Trabajo no encontrado.";
+    public function drawTrabajo($trabajo)
+    {
+        if ($trabajo) {
+            echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
+            echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
+            echo '    <div style="padding: 20px; border-radius: 10px;">';
+            echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+            echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
+            echo '    </div>';
+            echo '  </div>';
+            echo '  <div class="col-md-6 px-5">';
+            echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
+            echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
+            echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
+            echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+            echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
+            echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
+            echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
+            echo "<a href='formularioEditarTrabajo.php?id=" . $trabajo['id'] . "'><button>Editar Trabajo </button></a>";
+            echo "<a href='detalle.php?id=" . $trabajo['id'] . "'><button>Ver</button></a>";
+            echo "<a href='borrarTrabajo.php?id=" . $trabajo['id'] . "'><button>Borrar</button></a>";
+            echo '  </div>';
+            echo '</div>';
+        } else {
+            echo "Trabajo no encontrado.";
+        }
     }
-}
 
-public function drawDetalle($trabajo)
-{
-    if ($trabajo) {
-        echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
-        echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
-        echo '    <div style="padding: 20px; border-radius: 10px;">';
-        echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
-        echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
-        echo '    </div>';
-        echo '  </div>';
-        echo '  <div class="col-md-6 px-5">';
-        echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
-        echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
-        echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
-        echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
-        echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
-        echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
-        echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
-        echo "<a href='formularioEditarTrabajo.php?id=" . $trabajo['id'] . "'><button>Editar Trabajo </button></a>";
-        echo "<a href='borrarTrabajo.php?id=" . $trabajo['id'] . "'><button>Borrar</button></a>";
-        echo '  </div>';
-        echo '</div>';
-    } else {
-        echo "Trabajo no encontrado.";
+    public function drawDetalle($trabajo)
+    {
+        if ($trabajo) {
+            echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
+            echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
+            echo '    <div style="padding: 20px; border-radius: 10px;">';
+            echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+            echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
+            echo '    </div>';
+            echo '  </div>';
+            echo '  <div class="col-md-6 px-5">';
+            echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
+            echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
+            echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
+            echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+            echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
+            echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
+            echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
+            echo "<a href='formularioEditarTrabajo.php?id=" . $trabajo['id'] . "'><button>Editar Trabajo </button></a>";
+            echo "<a href='borrarTrabajo.php?id=" . $trabajo['id'] . "'><button>Borrar</button></a>";
+            echo '  </div>';
+            echo '</div>';
+        } else {
+            echo "Trabajo no encontrado.";
+        }
     }
-}
+
+    public function drawDetalleSinCrud($trabajo)
+    {
+        if ($trabajo) {
+            echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
+            echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
+            echo '    <div style="padding: 20px; border-radius: 10px;">';
+            echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
+            echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
+            echo '    </div>';
+            echo '  </div>';
+            echo '  <div class="col-md-6 px-5">';
+            echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
+            echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
+            echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
+            echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+            echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
+            echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
+            echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
+            echo '  </div>';
+            echo '</div>';
+        } else {
+            echo "Trabajo no encontrado.";
+        }
+    }
 
 
-    public function borrarUnTrabajo($id){
+    public function borrarUnTrabajo($id)
+    {
         $conn = $this->connect();
 
 
@@ -136,7 +162,7 @@ public function drawDetalle($trabajo)
         $conn->query($sql);
     }
 
-    public function createTrabajo($nombre,$tipo,$empresa,$descripcion,$ubicacion,$fecha,$salario,$duracion)
+    public function createTrabajo($nombre, $tipo, $empresa, $descripcion, $ubicacion, $fecha, $salario, $duracion)
     {
         $conn = $this->connect();
         $sql = "INSERT INTO trabajos (nombre, tipo, empresa, descripcion, ubicacion, fecha, salario, duracion) VALUES ('$nombre', '$tipo', '$empresa', '$descripcion', '$ubicacion', '$fecha', '$salario','$duracion')";
@@ -147,66 +173,117 @@ public function drawDetalle($trabajo)
         }
     }
 
-        
-    public function trabajadoretop() {
+
+    public function trabajadorestop()
+    {
         $conn = $this->connect();
         $sql = "SELECT dni, nombreCompleto, numeroSeguridadSocial, curriculum, direccion, ciudad, correoElectronico, nombreUsuario, contraseña, AVG(valoracion) AS media FROM usuarios GROUP BY dni, nombreUsuario ORDER BY media DESC LIMIT 6";
         $result = $conn->query($sql);
-        
+
         $top_cinco = array();
-        if ($num = $result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
                 $top_cinco[] = $row;
             }
         }
         $conn->close();
-        
 
-
+        echo "<div class='container mt-5 mb-5'>";
+        echo "<div class='row'>";
         foreach ($top_cinco as $usuario) {
-            echo "DNI: " . $usuario["dni"] . "<br>";
-            echo "Nombre completo: " . $usuario["nombreCompleto"] . "<br>";
-            echo "Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "<br>";
-            echo "Curriculum: " . $usuario["curriculum"] . "<br>";
-            echo "Dirección: " . $usuario["direccion"] . "<br>";
-            echo "Ciudad: " . $usuario["ciudad"] . "<br>";
-            echo "Correo electrónico: " . $usuario["correoElectronico"] . "<br>";
-            echo "Nombre de usuario: " . $usuario["nombreUsuario"] . "<br>";
-            echo "Contraseña: " . $usuario["contraseña"] . "<br>";
-            echo "Media de valoración: " . $usuario["media"] . "<br>";
-            echo "<br>";
+            echo "<div class='col-md-6 mb-4'>";
+            echo "<div class='card shadow-lg h-100 d-flex flex-column justify-content-between'>";
+            echo "<div>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>Nombre completo: " . $usuario["nombreCompleto"] . "</h5>";
+            echo "<p class='card-text'>Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "</p>";
+            echo "<p class='card-text'>Curriculum: " . $usuario["curriculum"] . "</p>";
+            echo "<p class='card-text'>Dirección: " . $usuario["direccion"] . "</p>";
+            echo "<p class='card-text'>Ciudad: " . $usuario["ciudad"] . "</p>";
+            echo "<p class='card-text'>Correo electrónico: " . $usuario["correoElectronico"] . "</p>";
+            echo "<p class='card-text'>Nombre de usuario: " . $usuario["nombreUsuario"] . "</p>";
+            echo "<p class='card-text'>Contraseña: " . $usuario["contraseña"] . "</p>";
+            echo "<p class='card-text'>Media de valoración: " . $usuario["media"] . "</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div>";
+            echo "<img src='ruta/a/la/imagen.jpg' class='mt-2 ms-auto' alt='Imagen' style='width: 50px;'>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
         }
-        
+        echo "</div>";
+        echo "</div>";
+
         return $top_cinco;
-        
     }
 
-    public function drawTrabajos($trabajos) {
+
+
+
+
+    public function drawTrabajos($trabajos)
+
+
+        echo '<div class="container mt-5">';
+        echo '  <div class="row justify-content-center">';
+        foreach ($trabajos as $trabajo) {
+            echo '    <div class="col-md-4">';
+            echo '      <div class="card shadow" style="max-width: 900px;">';
+            echo '        <div class="row g-0">';
+            echo '          <div class="col-md-4">';
+            echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" width="400" height="400">';
+            echo '          </div>';
+            echo '          <div class="col-md-8">';
+            echo '            <div class="card-body">';
+            echo '              <h5 class="card-title">' . $trabajo['nombre'] . '</h5>';
+            echo '              <p class="card-text">' . $trabajo['descripcion'] . '</p>';
+            echo '              <p class="card-text">Tipo: ' . $trabajo['tipo'] . '</p>';
+            echo '              <p class="card-text">Empresa: ' . $trabajo['empresa'] . '</p>';
+            echo '              <p class="card-text">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
+            echo '              <p class="card-text">Fecha: ' . $trabajo['fecha'] . '</p>';
+            echo '              <p class="card-text">Salario: ' . $trabajo['salario'] . '</p>';
+            echo '              <p class="card-text">Duración: ' . $trabajo['duracion'] . '</p>';
+            echo '              <a href="formularioEditarTrabajo.php?id=' . $trabajo['id'] . '" class="btn btn-primary me-2">Editar Trabajo</a>';
+            echo '              <a href="detalle.php?id=' . $trabajo['id'] . '" class="btn btn-secondary me-2">Ver</a>';
+            echo '              <a href="borrarTrabajo.php?id=' . $trabajo['id'] . '" class="btn btn-danger">Borrar</a>';
+            echo '            </div>';
+            echo '          </div>';
+            echo '        </div>';
+            echo '      </div>';
+            echo '    </div>';
+        }
+        echo '  </div>';
+        echo '</div>';
+
+    }
+
+
+    public function drawTrabajosSinCrud($trabajos)
+    {
         $trabajos = $this->general();
-        
+
         if ($trabajos) {
             echo '<div class="container mt-5">';
             echo '  <div class="row justify-content-center">';
             foreach ($trabajos as $trabajo) {
-                echo '    <div class="col-md-4">';
-                echo '      <div class="card shadow" style="max-width: 900px;">';
+                echo '    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">';
+                echo '      <div class="card shadow" style="width: 100%;">';
                 echo '        <div class="row g-0">';
-                echo '          <div class="col-md-4">';
-                echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" width="400" height="400">';
+                echo '          <div class="col-4">';
+                echo '            <img src="img/trabajoPrueba.png" alt="Imagen" class="img-fluid rounded-start" style="max-height: 150px; object-fit: cover;">';
                 echo '          </div>';
-                echo '          <div class="col-md-8">';
+                echo '          <div class="col-8">';
                 echo '            <div class="card-body">';
                 echo '              <h5 class="card-title">' . $trabajo['nombre'] . '</h5>';
                 echo '              <p class="card-text">' . $trabajo['descripcion'] . '</p>';
                 echo '              <p class="card-text">Tipo: ' . $trabajo['tipo'] . '</p>';
-                echo '              <p class="card-text">Empresa: ' . $trabajo['empresa']. '</p>';
+                echo '              <p class="card-text">Empresa: ' . $trabajo['empresa'] . '</p>';
                 echo '              <p class="card-text">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
                 echo '              <p class="card-text">Fecha: ' . $trabajo['fecha'] . '</p>';
                 echo '              <p class="card-text">Salario: ' . $trabajo['salario'] . '</p>';
-                echo '              <p class="card-text">Duración: ' . $trabajo['duracion']. '</p>';
-                echo '              <a href="formularioEditarTrabajo.php?id=' . $trabajo['id'] . '" class="btn btn-primary me-2">Editar Trabajo</a>';
-                echo '              <a href="detalle.php?id=' . $trabajo['id'] . '" class="btn btn-secondary me-2">Ver</a>';
-                echo '              <a href="borrarTrabajo.php?id=' . $trabajo['id'] . '" class="btn btn-danger">Borrar</a>';
+                echo '              <p class="card-text">Duración: ' . $trabajo['duracion'] . '</p>';
+                echo '              <a href="detalle.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-secondary me-2">Ver</a>';
                 echo '            </div>';
                 echo '          </div>';
                 echo '        </div>';
@@ -218,7 +295,10 @@ public function drawDetalle($trabajo)
         }
     }
 
-    public function general() {
+
+
+    public function general()
+    {
         $conn = new Conexion($this->confFile);
         $data = $conn->getConn();
 
@@ -242,7 +322,8 @@ public function drawDetalle($trabajo)
         return $datos;
     }
 
-    public function showNavigation() {
+    public function showNavigation()
+    {
         $conn = new Conexion($this->confFile);
         $data = $conn->getConn();
 
@@ -300,7 +381,8 @@ public function drawDetalle($trabajo)
         echo '</div>';
     }
 
-    public function getCurrentPage() {
+    public function getCurrentPage()
+    {
         if (isset($_GET['page'])) {
             return $_GET['page'];
         } elseif (isset($_SESSION['currentPage'])) {
@@ -310,7 +392,8 @@ public function drawDetalle($trabajo)
         }
     }
 
-    public function getCurrentOrder() {
+    public function getCurrentOrder()
+    {
         $defaultOrder = array('campo' => 'nombre', 'orden' => 'ASC');
         $allowedOrders = array(
             'nombre' => array('nombre', 'Nombre', 'nombre'),
