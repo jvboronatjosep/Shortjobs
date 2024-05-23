@@ -44,6 +44,10 @@
                             <label for="sedes">Sedes</label>
                             <input type="text" class="form-control" id="sedes" name="sedes" placeholder="Ingrese las sedes de la empresa" required>
                         </div>
+                        <div class="form-group">
+                            <label for="contraseña">contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese la contraseña" required>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrar Empresa</button>
                     </form>
                 </div>
