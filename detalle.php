@@ -1,6 +1,7 @@
 <?php
-
 require_once 'autoloader.php';
+session_start();
+
 $confFile = "./conf.csv";
 $gestion = new Trabajos($confFile);
 $id=$_GET["id"];

@@ -1,3 +1,7 @@
+<?php
+require_once 'autoloader.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,6 +1,6 @@
 <?php
 require_once 'autoloader.php';
-
+session_start();
 // Crea una instancia de la clase Trabajos
 $gestion = new Trabajos("./conf.csv");
 
