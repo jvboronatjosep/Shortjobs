@@ -29,7 +29,7 @@
                     <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Destacadas</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 30px;">Contacto</a>
@@ -76,10 +76,10 @@
             <div class="Caja">
                 <h2>Siguenos:</h2>
                 <div class="red-social">
-                    <a href="https://www.facebook.com/floridauniversitaria" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/florida_uni/" class="fa fa-instagram"></a>
-                    <a href="https://twitter.com/floridauni" class="fa fa-twitter"></a>
-                    <a href="https://www.linkedin.com/school/florida-universitaria/?originalSubdomain=es" class="fa fa-linkedin"></a>
+                    <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
+                    <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
                     <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
                 </div>
             </div>

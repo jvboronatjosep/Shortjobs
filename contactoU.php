@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inicio.php" style="margin-right: 15px;">Inicio</a>
+                    <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Trabajos</a>
@@ -32,7 +32,7 @@
                     <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="ContactoE.php" style="";">Contacto</a>
+                    <a class="nav-link text-white active" href="ContactoE.php">Contacto</a>
                 </li>
             </ul>
         <div>
