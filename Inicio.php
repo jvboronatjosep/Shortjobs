@@ -23,7 +23,6 @@
             <div class="collapse navbar-collapse" id="menu">
                 <div class="d-flex ms-auto">
                     <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 15px;">Iniciar Sesión</a>
-                    <a href="Empresa-Usuario.php" class="btn btn-light btn-lg" style="margin-right: 60px;">Registro</a>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario - ShortJobs</title>
+    <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .register-container {
@@ -30,18 +31,42 @@
                         <h2>Registro de Usuario</h2>
                         <p>Por favor, complete el siguiente formulario para registrarse como usuario en ShortJobs</p>
                     </div>
-                    <form>
+                    <form action="procesarRegisterUser.php" method="post">
                         <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo" required>
+                            <label for="dni">DNI</label>
+                            <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese su DNI" required>
                         </div>
                         <div class="form-group">
-                            <label for="userName">Nombre de usuario</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Ingrese nombre de usuario" required>
+                            <label for="nombreCompleto">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Ingrese su nombre completo" required>
                         </div>
                         <div class="form-group">
-                            <label for="userPassword">Contraseña</label>
-                            <input type="userPassword" class="form-control" id="userPassword" placeholder="Ingrese su contraseña" required>
+                            <label for="numeroSeguridadSocial">Número de la Seguridad Social</label>
+                            <input type="number" class="form-control" id="numeroSeguridadSocial" name="numeroSeguridadSocial" placeholder="Ingrese su número de la Seguridad Social" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="curriculum">Curriculum</label>
+                            <input type="text" class="form-control" id="curriculum" name="curriculum" placeholder="Ingrese su curriculum" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" placeholder="Ingrese su correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombreUsuario">Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Ingrese su nombre de usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                     </form>
