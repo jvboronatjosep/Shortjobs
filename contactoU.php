@@ -29,7 +29,7 @@
                     <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Destacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white active" href="ContactoE.php" style="";">Contacto</a>
