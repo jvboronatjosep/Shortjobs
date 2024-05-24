@@ -2,7 +2,7 @@
 require_once 'autoloader.php';
 $seguridad = new Security;
 $seguridad->checkLoggedIn();
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
