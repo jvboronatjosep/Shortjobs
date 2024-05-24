@@ -52,7 +52,7 @@ $loginMessage = $seguridad->doLoginEmpresa();
                         <h4 style="color: red;"><?= $loginMessage ?></h4>
                         <?php endif; ?>
                     </div>
-                    <form action="perfilEmpresa.php" method="post">
+                    <form action="" method="post">
                         <div class="form-group">
                             <label for="empresaName">Nombre de usuario</label>
                             <input type="text" class="form-control" id="empresaName" name="empresaName" placeholder="Ingrese nombre de usuario" required>
