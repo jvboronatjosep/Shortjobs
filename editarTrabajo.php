@@ -1,5 +1,7 @@
 <?php
 require_once 'autoloader.php';
+$seguridad = new Security;
+$seguridad->checkLoggedIn();
 session_start();
 $confFile = "./conf.csv";
 $gestion = new Trabajos($confFile);
