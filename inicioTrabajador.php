@@ -43,7 +43,7 @@ $seguridad->checkLoggedIn();
             </ul>
         </div>
         <div>
-                <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;"></a>
+                <a href="inicioSesionPerfilUsuario.php".php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;"></a>
             </div>
     </div>
 </nav>
