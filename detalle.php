@@ -21,5 +21,5 @@ $brand = $gestion->getTrabajoById($id);
     <h1>Detalle de la marca</h1>
     <hr>
     <h2><?php $gestion->drawDetalleSinCrud($brand);?></h2>
-    <a href="perfilEmpresa.php"><button>Volver</button></a>
+    <a href="inicioSesionPerfilEmpresa.php"><button>Volver</button></a>
 </body>

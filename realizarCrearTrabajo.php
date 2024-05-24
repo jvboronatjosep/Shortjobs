@@ -13,5 +13,5 @@ $salario = $_POST['salario'];
 $duracion = $_POST['duracion'];
 
 $gestion->createTrabajo($nombre, $tipo, $empresa, $descripcion, $ubicacion, $fecha, $salario, $duracion);
-header('Location: perfilEmpresa.php');
+header('Location: inicioSesionPerfilEmpresa.php');
 ?>
