@@ -5,10 +5,12 @@ require_once 'autoloader.php';
 
 
 $confFile = "./conf.csv";
+
 $gestion = new Empresas($confFile);
+
 $trabajos = new Trabajos($confFile);
 
-$userName = $_POST['userName'];
+$userName = $_POST['empresa Name'];
 
 
 $brandsObtained = $gestion->getEmpresas();
@@ -73,6 +75,7 @@ $nombres = $gestion->getEmpresaByName($userName);
 <br>
 <br>
 <br>
+
 <br>
 <div class="container mt-5">
     <div class="row">
