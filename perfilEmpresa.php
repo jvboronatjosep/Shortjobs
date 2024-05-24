@@ -1,7 +1,7 @@
 <?php
 require_once 'autoloader.php';
-$seguridad = new Security;
-$seguridad->checkLoggedIn();
+//$seguridad = new Security;
+//$seguridad->checkLoggedIn();
 
 
 $confFile = "./conf.csv";
