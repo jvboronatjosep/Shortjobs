@@ -100,7 +100,7 @@ class Trabajos extends Conexion
     {         
 
         if ($filtro != '') {
-            $sql = "WHERE nombre like '%$filtro%' OR descripcion like '%$filtro%'";
+            $sql = "WHERE nombre like '%$filtro%' OR descripcion like '%$filtro%' OR salario like '%$filtro%' OR duracion like '%$filtro%' OR fecha like '%$filtro%' OR ubicacion like '%$filtro%'";
         }
         else
         {
