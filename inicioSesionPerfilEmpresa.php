@@ -50,7 +50,7 @@ require_once 'autoloader.php';
                     </div>
                     <form action="perfilEmpresa.php" method="post">
                         <div class="form-group">
-                            <label for="empresaName">Nombre de usuario</label>
+                            <label for="empresaName">Nombre de Empresa</label>
                             <input type="text" class="form-control" id="empresaName" name="empresaName" placeholder="Ingrese nombre de usuario" required>
                         </div>
                         <div class="form-group">
