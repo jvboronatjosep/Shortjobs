@@ -1,9 +1,3 @@
-<?php
-require_once 'autoloader.php';
-$seguridad = new Security;
-$seguridad->checkLoggedIn();
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,7 +33,7 @@ $seguridad->checkLoggedIn();
     <div class="container">
         <div class="form-container">
             <h2 class="text-center">Publicar Oferta de Trabajo</h2>
-            <form action="procesarFormulario.php" method="POST">
+            <form action="realizarCrearTrabajo.php" method="POST">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre del Trabajo</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -49,7 +43,7 @@ $seguridad->checkLoggedIn();
                     <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="tipo" class="form-label">Tipo de Trabajo</label>
+                    <label for="tipo" class="form-label">Tipo</label>
                     <input type="text" class="form-control" id="tipo" name="tipo" required>
                 </div>
                 <div class="mb-3">

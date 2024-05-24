@@ -1,7 +1,7 @@
 <?php
 require_once 'autoloader.php';
-//$seguridad = new Security;
-//$seguridad->checkLoggedIn();
+$seguridad = new Security;
+$seguridad->checkLoggedIn();
 
 
 $confFile = "./conf.csv";
@@ -10,7 +10,7 @@ $gestion = new Empresas($confFile);
 
 $trabajos = new Trabajos($confFile);
 
-$userName = $_POST['empresa Name'];
+$userName = $_POST['empresaName'];
 
 
 $brandsObtained = $gestion->getEmpresas();
