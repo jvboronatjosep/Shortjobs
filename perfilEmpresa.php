@@ -49,7 +49,7 @@ $nombres = $gestion->getEmpresaByName($userName);
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
-    <div class="container-fluid">
+    <div class="container-fluid">   
         <a class="navbar-brand" href="inicioEmpresa.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo"></a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,17 +57,17 @@ $nombres = $gestion->getEmpresaByName($userName);
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inicioEmpresa.php">Inicio</a>
+                    <a class="nav-link text-white" href="inicioEmpresa.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="trabajadoresDestacados.php">Trabajadores Destacados</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 15px;">Contacto</a>
                 </li>
             </ul>
             <div>
-                <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
+                <a href="perfilEmpresa.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;"></a>
             </div>
         </div>
     </div>

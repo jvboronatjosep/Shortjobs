@@ -24,28 +24,30 @@ $order = $gestion->getCurrentOrder();
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
-        <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt="Logo"></a>
+        <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white active" href="trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 30px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoU.php">Contacto</a>
                 </li>
             </ul>
-        </div>
         <div>
-            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;" alt="Perfil"></a>
+            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
+        </div>
         </div>
     </div>
 </nav>

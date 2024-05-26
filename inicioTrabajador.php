@@ -32,19 +32,19 @@ $seguridad->checkLoggedIn();
                     <a class="nav-link text-white active" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white" href="trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
+                    <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 30px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoU.php">Contacto</a>
                 </li>
             </ul>
-        </div>
         <div>
-                <a href="inicioSesionPerfilUsuario.php".php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;"></a>
-            </div>
+            <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 30px;"></a>
+        </div>
+        </div>
     </div>
 </nav>
 

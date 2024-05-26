@@ -54,17 +54,17 @@ $nombre = $gestion->getUserByName($userName);
                     <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white active" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php" style="">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 15px;">Contacto</a>
                 </li>
             </ul>
             <div>
-                <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin: 0 20 0 30;"></a>
+                <a href="perfilUsuario.php"><img src="img/fotoPerfil.png" class="profile-pic" width="40px" style="margin-right: 30px;"></a>
             </div>
         </div>
     </div>
