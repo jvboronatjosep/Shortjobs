@@ -22,6 +22,7 @@ $order = $gestion->getCurrentOrder();
     <link rel="stylesheet" href="style/style_inicio_empresa.css">
 </head>
 <body>
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
@@ -42,7 +43,7 @@ $order = $gestion->getCurrentOrder();
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoTrabajador.php">Contacto</a>
                 </li>
             </ul>
         <div>
@@ -94,34 +95,33 @@ $order = $gestion->getCurrentOrder();
     </div>
 </div>
 
-<div class="contacto">
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="Caja">
-                <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="Logo" width="200px"></a>
+<div class="contacto"><footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="Caja">
+        <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="" width="200px"></a>
+        </div>
+        <div class="Caja">
+            <div class="Medio">
+                <h2 id="contacto">Contacto:</h2>
+                <p>Telefono De Contacto:</p>
+                <p>☎️ 679 63 78 85</p>
             </div>
-            <div class="Caja">
-                <div class="Medio">
-                    <h2 id="contacto">Contacto:</h2>
-                    <p>Telefono De Contacto:</p>
-                    <p>☎️ 679 63 78 85</p>
-                </div>
-            </div>
-            <div class="Caja">
-                <h2>Síguenos:</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/floridauniversitaria" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/florida_uni/" class="fa fa-instagram"></a>
-                    <a href="https://twitter.com/floridauni" class="fa fa-twitter"></a>
-                    <a href="https://www.linkedin.com/school/florida-universitaria/?originalSubdomain=es" class="fa fa-linkedin"></a>
+        </div>
+        <div class="Caja">
+            <h2>Siguenos:</h2>
+            <div class="red-social">
+                    <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
+                    <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
                     <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
                 </div>
-            </div>
         </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
-        </div>
-    </footer>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
+    </div>
+</footer></div>
 </div>
 </body>
 </html>

@@ -48,6 +48,7 @@ $nombres = $gestion->getEmpresaByName($userName);
     </style>
 </head>
 <body>
+<div class="container-fliuid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
     <div class="container-fluid">   
         <a class="navbar-brand" href="inicioEmpresa.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo"></a>
@@ -63,7 +64,7 @@ $nombres = $gestion->getEmpresaByName($userName);
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 15px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoEmpresa.php" style="margin-right: 15px;">Contacto</a>
                 </li>
             </ul>
             <div>
@@ -105,7 +106,6 @@ $nombres = $gestion->getEmpresaByName($userName);
         ?>
     </div>
 </div>
-
 <div class="contacto"><footer class="pie-pagina">
     <div class="grupo-1">
         <div class="Caja">
@@ -121,16 +121,18 @@ $nombres = $gestion->getEmpresaByName($userName);
         <div class="Caja">
             <h2>Siguenos:</h2>
             <div class="red-social">
-                <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
-                <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
-                <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
-                <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
-                <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
-            </div>
+                    <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
+                    <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
+                    <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
+                </div>
         </div>
     </div>
     <div class="grupo-2">
         <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
     </div>
 </footer></div>
+</div>
+<body>
 </html>

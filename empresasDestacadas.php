@@ -26,6 +26,7 @@ $trabajos = new Trabajos($confFile);
     </style>
 </head>
 <body>
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
@@ -46,7 +47,7 @@ $trabajos = new Trabajos($confFile);
                     <a class="nav-link text-white active" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoTrabajador.php">Contacto</a>
                 </li>
             </ul>
         <div>
@@ -70,8 +71,6 @@ $trabajos = new Trabajos($confFile);
     ?>
 </div>
 
-
-</body>
 
 <div class="contacto"><footer class="pie-pagina">
     <div class="grupo-1">
@@ -100,4 +99,6 @@ $trabajos = new Trabajos($confFile);
         <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
     </div>
 </footer></div>
+</div>
+</body>
 </html>

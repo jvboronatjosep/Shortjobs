@@ -9,7 +9,7 @@ $seguridad->checkLoggedIn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - ShortJobs</title>
+    <title>Inicio Trabajador - ShortJobs</title>
     <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@ $seguridad->checkLoggedIn();
     <link rel="stylesheet" href="style/style_inicio_trabajador.css">
 </head>
 <body>
-
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
@@ -38,7 +38,7 @@ $seguridad->checkLoggedIn();
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoTrabajador.php">Contacto</a>
                 </li>
             </ul>
         <div>
@@ -61,37 +61,38 @@ $seguridad->checkLoggedIn();
                 <h3 class="fw-bold" style="font-size: 65px;">Plataforma especializada <br> en conectar <br> usuarios con <br> trabajos temporales</h3>
             </div>
             <div class="col-sm-6 text-start align-self-center">
-                <h5 class="text-justify" style="font-size: 24px;">Descubre una amplia variedad de trabajos temporales diseñados para ajustarse a tu estilo de vida. Con nuestra plataforma, encontrar oportunidades laborales flexibles es rápido y sencillo. Desde trabajos a tiempo parcial hasta proyectos freelance, estamos aquí para ayudarte a encontrar tu próximo desafío laboral.<br> <br><a href="">Leer más</a></h5>
+                <h5 class="text-justify" style="font-size: 24px;">Descubre una amplia variedad de trabajos temporales diseñados para ajustarse a tu estilo de vida. Con nuestra plataforma, encontrar oportunidades laborales flexibles es rápido y sencillo. Desde trabajos a tiempo parcial hasta proyectos freelance, estamos aquí para ayudarte a encontrar tu próximo desafío laboral.<br> <br><a href="trabajos.php">Leer más</a></h5>
             </div>
 
         </div>
     </div>
-</body>
-<footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="Caja">
-                <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="" width="200px"></a>
+<div class="contacto"><footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="Caja">
+        <a href="Inicio.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="" width="200px"></a>
+        </div>
+        <div class="Caja">
+            <div class="Medio">
+                <h2 id="contacto">Contacto:</h2>
+                <p>Telefono De Contacto:</p>
+                <p>☎️ 679 63 78 85</p>
             </div>
-            <div class="Caja">
-                <div class="Medio">
-                    <h2 id="contacto">Contacto:</h2>
-                    <p>Telefono De Contacto:</p>
-                    <p>☎️ 679 63 78 85</p>
-                </div>
-            </div>
-            <div class="Caja">
-                <h2>Siguenos:</h2>
-                <div class="red-social">
+        </div>
+        <div class="Caja">
+            <h2>Siguenos:</h2>
+            <div class="red-social">
                     <a href="https://www.facebook.com/share/uYwJ7fS539XhHXbm/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
                     <a href="https://www.instagram.com/shortjobs?igsh=MW9qb2xweTd6ZzJzZw%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
                     <a href="https://x.com/shortjobs12?s=21&t=3ACYm1uHNjtFZz8zHOWisA" class="fa fa-twitter"></a>
                     <a href="https://www.linkedin.com/in/shortjobs-13414630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fa fa-linkedin"></a>
                     <a href="https://www.youtube.com/c/floridauniversitaria" class="fa fa-youtube"></a>
                 </div>
-            </div>
         </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
-        </div>
-    </footer>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
+    </div>
+</footer></div>
+</div>
+</body>
 </html>

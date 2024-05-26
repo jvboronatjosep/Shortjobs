@@ -17,7 +17,7 @@ $nombre = $gestion->getUserByName($userName);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario - ShortJobs</title>
+    <title>Perfil Trabajador - ShortJobs</title>
     <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -42,6 +42,7 @@ $nombre = $gestion->getUserByName($userName);
     </style>
 </head>
 <body>
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="inicioUsuario.php"><img src="img/LogoShortJobs-removebg-preview.png" alt="ShortJobs Logo"></a>
@@ -54,13 +55,13 @@ $nombre = $gestion->getUserByName($userName);
                     <a class="nav-link text-white" href="inicioTrabajador.php" style="margin-right: 15px;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="Trabajos.php" style="margin-right: 15px;">Trabajos</a>
+                    <a class="nav-link text-white" href="trabajos.php" style="margin-right: 15px;">Trabajos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="empresasDestacadas.php" style="margin-right: 15px;">Empresas Destacadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoU.php" style="margin-right: 15px;">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoTrabajador.php" style="margin-right: 15px;">Contacto</a>
                 </li>
             </ul>
             <div>
@@ -96,8 +97,8 @@ $nombre = $gestion->getUserByName($userName);
 
 
     <div class="row">
-       <?php
-        $gestion->drawUsers($nombres);
+        <?php
+            $gestion->drawUsers($nombres);
         ?>
     </div>
 </div>
@@ -129,4 +130,6 @@ $nombre = $gestion->getUserByName($userName);
         <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
     </div>
 </footer></div>
+</div>
+</body>
 </html>

@@ -9,7 +9,7 @@ $seguridad->checkLoggedIn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - ShortJobs</title>
+    <title>Inicio Empresa - ShortJobs</title>
     <link rel="icon" href="img/logobarra.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -19,6 +19,7 @@ $seguridad->checkLoggedIn();
     </style>
 </head>
 <body>
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="inicio.php"><img class="ml-4" style="height: 80px; width: 130px; margin-left: 40px;" src="img/LogoShortJobs-removebg-preview.png" alt=""></a>
@@ -36,7 +37,7 @@ $seguridad->checkLoggedIn();
                     <a class="nav-link text-white" href="trabajadoresDestacados.php" style="margin-right: 15px;">Trabajadores Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="ContactoE.php">Contacto</a>
+                    <a class="nav-link text-white" href="ContactoEmpresa.php">Contacto</a>
                 </li>
             </ul>
         <div>
@@ -58,12 +59,10 @@ $seguridad->checkLoggedIn();
                 <h3 class="fw-bold" style="font-size: 65px;">Empresa especializada <br> en unir talento <br> temporal con <br> trabajos flexibles</h3>
             </div>
             <div class="col-sm-6 text-start align-self-center">
-                <h5 class="text-justify" style="font-size: 30px;">Ofrecemos soluciones completas para trabajadores temporales y empresas, desde selección de talento hasta gestión de proyectos, adaptándonos al mercado laboral cambiante para garantizar el éxito. <br> <br><a href="">Leer más</a></h5>
+                <h5 class="text-justify" style="font-size: 30px;">Brindamos soluciones completas para empresas en busca de talento temporal. Desde la selección cuidadosa de candidatos hasta la gestión eficaz de proyectos, nos adaptamos ágilmente al mercado laboral cambiante para garantizar su éxito.<br> <br><a href="trabajos.php">Leer más</a></h5>
             </div>
         </div>
     </div>
-
-</body>
 
 <div class="contacto"><footer class="pie-pagina">
     <div class="grupo-1">
@@ -92,4 +91,6 @@ $seguridad->checkLoggedIn();
         <small>&copy; 2024 <b>ShortJobs</b> - Todos Los Derechos Reservados.</small>
     </div>
 </footer></div>
+</div>
+</body>
 </html>
