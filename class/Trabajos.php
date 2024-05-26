@@ -100,7 +100,7 @@ class Trabajos extends Conexion
     {         
 
         if ($filtro != '') {
-            $sql = "WHERE nombre like '%$filtro%' OR descripcion like '%$filtro%' OR salario like '%$filtro%' OR duracion like '%$filtro%' OR fecha like '%$filtro%' OR ubicacion like '%$filtro%'";
+            $sql = "WHERE nombre like '%$filtro%' OR duracion like '%$filtro%' OR duracion like '%$filtro%' OR fecha like '%$filtro%' OR ubicacion like '%$filtro%' OR tipo like '%$filtro%'";
         }
         else
         {
@@ -109,7 +109,6 @@ class Trabajos extends Conexion
         
         return $sql;  
     }
- 
 
     public function drawTrabajo($trabajo)
     {
@@ -169,27 +168,34 @@ class Trabajos extends Conexion
     public function drawDetalleSinCrud($trabajo)
     {
         if ($trabajo) {
-            echo '<div class="container-fluid mt-5 d-md-flex justify-content-center" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); background-color: #f5f5f5; color: black; border-radius: 10px;">';
-            echo '  <div class="col-md-6 d-flex align-items-center justify-content-center">';
-            echo '    <div style="padding: 20px; border-radius: 10px;">';
-            echo '      <img src="/img/temporada1.jpg" alt="Amazon Prime Video" class="img-fluid rounded" width="400" height="400">';
-            echo '      <p class="text-center mt-3" style="font-size: 20px;">' . $trabajo['nombre'] . ' </p>';
+            echo '<div class="container mt-5 d-flex justify-content-center">';
+            echo '<div class="col-md-8">';
+            echo '    <div class="card shadow-lg" style="background-color: #f8f9fa;">';
+            echo '      <div class="card-header bg-primary text-white text-center">';
+            echo '        <h5 class="card-title mb-0">' . $trabajo['nombre'] . '</h5>';
+            echo '      </div>';
+            echo '      <div class="card-body">';
+            echo '        <p class="card-text"><strong>Descripción:</strong> ' . $trabajo['descripcion'] . '</p>';
+            echo '        <p class="card-text"><strong>Tipo:</strong> ' . $trabajo['tipo'] . '</p>';
+            echo '        <p class="card-text"><strong>Empresa:</strong> ' . $trabajo['empresa'] . '</p>';
+            echo '        <p class="card-text"><strong>Ubicación:</strong> ' . $trabajo['ubicacion'] . '</p>';
+            echo '        <p class="card-text"><strong>Fecha:</strong> ' . $trabajo['fecha'] . '</p>';
+            echo '        <p class="card-text"><strong>Salario:</strong> ' . $trabajo['salario'] . '</p>';
+            echo '        <p class="card-text"><strong>Duración:</strong> ' . $trabajo['duracion'] . '</p>';
+            echo '      </div>';
+            echo '      <div class="card-footer bg-secondary text-white text-center">';
+            echo '        <small>Detalles del trabajo</small>';
+            echo '      </div>';
             echo '    </div>';
-            echo '  </div>';
-            echo '  <div class="col-md-6 px-5">';
-            echo '    <p class="mb-4">' . $trabajo['descripcion'] . '</p>';
-            echo '    <p class="mb-4">Tipo: ' . $trabajo['tipo'] . '</p>';
-            echo '    <p class="mb-4">Empresa: ' . $trabajo['empresa'] . '</p>';
-            echo '    <p class="mb-4">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
-            echo '    <p class="mb-4">Fecha: ' . $trabajo['fecha'] . '</p>';
-            echo '    <p class="mb-4">Salario: ' . $trabajo['salario'] . '</p>';
-            echo '    <p class="mb-4">Duración: ' . $trabajo['duracion'] . '</p>';
             echo '  </div>';
             echo '</div>';
         } else {
-            echo "Trabajo no encontrado.";
+            echo '<div class="container mt-5">';
+            echo '<div class="alert alert-warning" role="alert">Trabajo no encontrado.</div>';
+            echo '</div>';
         }
     }
+    
 
 
     public function borrarUnTrabajo($id)
@@ -314,12 +320,10 @@ class Trabajos extends Conexion
                 echo '          <div class="col-8">';
                 echo '            <div class="card-body">';
                 echo '              <h5 class="card-title">' . $trabajo['nombre'] . '</h5>';
-                echo '              <p class="card-text">' . $trabajo['descripcion'] . '</p>';
                 echo '              <p class="card-text">Tipo: ' . $trabajo['tipo'] . '</p>';
                 echo '              <p class="card-text">Empresa: ' . $trabajo['empresa'] . '</p>';
                 echo '              <p class="card-text">Ubicación: ' . $trabajo['ubicacion'] . '</p>';
                 echo '              <p class="card-text">Fecha: ' . $trabajo['fecha'] . '</p>';
-                echo '              <p class="card-text">Salario: ' . $trabajo['salario'] . '</p>';
                 echo '              <p class="card-text">Duración: ' . $trabajo['duracion'] . '</p>';
                 echo '              <a href="detalle.php?id=' . urlencode($trabajo['id']) . '" class="btn btn-secondary me-2">Ver</a>';
                 echo '            </div>';
