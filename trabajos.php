@@ -76,7 +76,6 @@ $order = $gestion->getCurrentOrder();
                     <input type="text" name="query" class="form-control me-2" value="<?php echo $filtro?>" placeholder="Buscar trabajos...">
 
                     <button type="submit" class="btn btn-primary me-2">Buscar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">Filtros</button>
                 </form>
             </div>
     </div>

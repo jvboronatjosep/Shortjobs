@@ -231,28 +231,28 @@ class Trabajos extends Conexion
         echo "<div class='row'>";
         foreach ($top_cinco as $usuario) {
             echo "<div class='col-md-6 mb-4'>";
-            echo "<div class='card shadow-lg h-100 d-flex flex-column justify-content-between'>";
-            echo "<div>";
-            echo "<div class='card-body'>";
-            echo "<h5 class='card-title'>Nombre completo: " . $usuario["nombreCompleto"] . "</h5>";
-            echo "<p class='card-text'>Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "</p>";
-            echo "<p class='card-text'>Curriculum: " . $usuario["curriculum"] . "</p>";
-            echo "<p class='card-text'>Dirección: " . $usuario["direccion"] . "</p>";
-            echo "<p class='card-text'>Ciudad: " . $usuario["ciudad"] . "</p>";
-            echo "<p class='card-text'>Correo electrónico: " . $usuario["correoElectronico"] . "</p>";
-            echo "<p class='card-text'>Nombre de usuario: " . $usuario["nombreUsuario"] . "</p>";
-            echo "<p class='card-text'>Contraseña: " . $usuario["contraseña"] . "</p>";
-            echo "<p class='card-text'>Media de valoración: " . $usuario["media"] . "</p>";
+            echo "<div class='card shadow-lg h-100'>";
+            echo "<div class='card-body bg-light'>";
+            echo "<h5 class='card-title text-primary'>Nombre: " . $usuario["nombreCompleto"] . "</h5>";
+            echo "<p class='card-text'><i class='bi bi-person-badge'></i> Número de Seguridad Social: " . $usuario["numeroSeguridadSocial"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-file-earmark-text'></i> Curriculum: " . $usuario["curriculum"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-geo-alt'></i> Dirección: " . $usuario["direccion"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-building'></i> Ciudad: " . $usuario["ciudad"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-envelope'></i> Correo electrónico: " . $usuario["correoElectronico"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-person'></i> Nombre de usuario: " . $usuario["nombreUsuario"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-key'></i> Contraseña: " . $usuario["contraseña"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-star-fill text-warning'></i> Media de valoración: " . $usuario["media"] . "</p>";
             echo "</div>";
-            echo "</div>";
-            echo "<div>";
-            echo "<img src='ruta/a/la/imagen.jpg' class='mt-2 ms-auto' alt='Imagen' style='width: 50px;'>";
+            echo "<div class='card-footer bg-secondary text-white'>";
+            echo "<small>Perfil de usuario</small>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
         }
         echo "</div>";
         echo "</div>";
+        
+        
 
         return $top_cinco;
     }

@@ -30,6 +30,18 @@ create table empresas(
     valoracion INT CHECK (valoracion BETWEEN 1 AND 5)
 );
 
+
+drop table if exists trabajados;
+CREATE TABLE trabajados (
+    id_trabajados int(11) AUTO_INCREMENT,
+    nombre varchar(50),
+    id_empresa int(11) NOT NULL,
+    PRIMARY KEY (id_trabajados),
+    FOREIGN KEY (id_empresa) REFERENCES empresas(id)
+);
+
+
+
 drop table if exists trabajos;
 create table trabajos(
 	id int primary key auto_increment,
@@ -46,12 +58,12 @@ create table trabajos(
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `userId` int(11) NOT NULL AUTO_INCREMENT,
-  `userName` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `userPassword` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `securePassword` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`userId`),
-  UNIQUE KEY `userName` (`userName`)
+    `userId` int(11) NOT NULL AUTO_INCREMENT,
+    `userName` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+    `userPassword` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+    `securePassword` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+    PRIMARY KEY (`userId`),
+    UNIQUE KEY `userName` (`userName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 

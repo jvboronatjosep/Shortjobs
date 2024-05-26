@@ -110,21 +110,22 @@ class Empresas extends Conexion
         echo "<div class='row'>";
         foreach ($top_seis as $empresa) {
             echo "<div class='col-md-6 mb-4'>";
-            echo "<div class='card shadow-lg h-100 d-flex flex-column justify-content-between'>";
-            echo "<div class='card-body'>";
-            echo "<h5 class='card-title'>Tema: " . $empresa["tema"] . "</h5>";
-            echo "<p class='card-text'>Nombre: " . $empresa["nombre"] . "</p>";
-            echo "<p class='card-text'>Sede: " . $empresa["sedes"] . "</p>";
-            echo "<p class='card-text'>Media de valoración: " . $empresa["media"] . "</p>";
+            echo "<div class='card shadow-lg h-100'>";
+            echo "<div class='card-body bg-light'>";
+            echo "<h5 class='card-title text-primary'>Nombre: " . $empresa["nombre"] . "</h5>";
+            echo "<p class='card-text'><i class='bi bi-building'></i> Tema: " . $empresa["tema"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-geo-alt'></i> Sede: " . $empresa["sedes"] . "</p>";
+            echo "<p class='card-text'><i class='bi bi-star-fill text-warning'></i> Media de valoración: " . $empresa["media"] . "</p>";
             echo "</div>";
-            echo "<div>";
-            echo "<img src='ruta/a/la/imagen.jpg' class='mt-2 ms-auto' alt='Imagen' style='width: 50px;'>";
+            echo "<div class='card-footer bg-secondary text-white'>";
+            echo "<small>Información de la empresa</small>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
         }
         echo "</div>";
         echo "</div>";
+        
         
         return $top_seis;
     }

@@ -1,20 +1,43 @@
 <?php
-$to_email = "jobodo@softin.com";
-$subject = "Test Mail from PHP using MailHog";
-$body = "This is a test email sent from PHP using MailHog.";
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$host = "mailhog"; // This should match the service name in your Docker Compose file
-$port = 1025;      // MailHog SMTP port
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-$headers = "From: sender@example.com\r\n";
-$headers .= "Reply-To: sender@example.com\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-if (mail($to_email, $subject, $body, $headers)) {
-    echo "Email successfully sent to $to_email";
-} else {
-    echo "Email delivery failed";
+try {
+    //Server settings
+
+
+    
+    $mail->isSMTP();
+$mail->Host = 'sandbox.smtp.mailtrap.io';
+$mail->SMTPAuth = true;
+$mail->Port = 2525;
+$mail->Username = '140b95a8babb39';
+$mail->Password = 'cdae7b0e045b02';//TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //Recipients
+    //$mail->setFrom('jvboronatdavid@gmail.com', 'Mailer');
+    $mail->addAddress('jvboronat@gmail.com');     //Add a recipient
+                //Name is optional
+
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-?>
 

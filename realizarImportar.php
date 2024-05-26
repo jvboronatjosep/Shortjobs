@@ -9,5 +9,5 @@ $importTrabajos = "trabajos.csv";
 $importador = new Importar($confFile); 
 $importador->importarEmpresa($importEmpresa);
 $importador->importarUsuarios($importUsuarios);
-$importador->importarTrabajos($importTrabajos); 
+$importador->importarTrabajos($importTrabajos);
 header('Location: ./Inicio.php');
