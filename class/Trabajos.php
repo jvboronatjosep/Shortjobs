@@ -364,68 +364,71 @@ class Trabajos extends Conexion
     {
         $conn = new Conexion($this->confFile);
         $data = $conn->getConn();
-
+    
         $pagina_actual = (isset($_GET['page']) && ($_GET['page'])) ? $_GET['page'] : 1;
-
         $resultados_por_pagina = 6;
-
-        $total_registros_query = "SELECT COUNT(*) AS total FROM trabajos ". $filtro; 
-
-
+    
+        $total_registros_query = "SELECT COUNT(*) AS total FROM trabajos " . $filtro;
         $total_registros_resultado = mysqli_query($data, $total_registros_query);
         $total_registros_fila = mysqli_fetch_assoc($total_registros_resultado);
         $total_registros = $total_registros_fila['total'];
         $total_paginas = ceil($total_registros / $resultados_por_pagina);
-
-        if ($total_registros>0) {
-        echo '<div class="pagination">';
-
-        $pagina_anterior = $pagina_actual - 1;
-        $pagina_siguiente = $pagina_actual + 1;
-
-        if ($pagina_actual > 1) {
-            echo '<a href="?page=1">  <<  </a> ';
-            echo '<a href="?page=' . $pagina_anterior . '">  <-  </a> ';
-        } else {
-            echo '<span> << </span> ';
-            echo '<span>‎ <-</span> ';
-        }
-
-        if ($pagina_actual == 1) {
-            echo '<strong> ‎ Inicio ‎  </strong> ';
-        } else {
-            echo '<a href="?page=1">‎  Inicio ‎  </a> ';
-        }
-
-        for ($pagina = 2; $pagina < $total_paginas; $pagina++) {
-            if ($pagina == $pagina_actual) {
-                echo '<strong>' . $pagina . '</strong> ';
+    
+        if ($total_registros > 0) {
+            echo '<nav aria-label="Page navigation example">';
+            echo '<ul class="pagination justify-content-center">';
+    
+            $pagina_anterior = $pagina_actual - 1;
+            $pagina_siguiente = $pagina_actual + 1;
+    
+            
+            if ($pagina_actual > 1) {
+                echo '<li class="page-item"><a class="page-link" href="?page=1"><<</a></li>';
+                echo '<li class="page-item"><a class="page-link" href="?page=' . $pagina_anterior . '"><</a></li>';
             } else {
-                echo '<a href="?page=' . $pagina . '">' . $pagina . '</a> ';
+                echo '<li class="page-item disabled"><span class="page-link"><<</span></li>';
+                echo '<li class="page-item disabled"><span class="page-link"><</span></li>';
             }
-        }
-
-        if ($pagina_actual == $total_paginas) {
-            echo '<strong> Fin</strong> ';
+    
+            
+            if ($pagina_actual == 1) {
+                echo '<li class="page-item active"><span class="page-link">Inicio</span></li>';
+            } else {
+                echo '<li class="page-item"><a class="page-link" href="?page=1">Inicio</a></li>';
+            }
+    
+            
+            for ($pagina = 2; $pagina < $total_paginas; $pagina++) {
+                if ($pagina == $pagina_actual) {
+                    echo '<li class="page-item active"><span class="page-link">' . $pagina . '</span></li>';
+                } else {
+                    echo '<li class="page-item"><a class="page-link" href="?page=' . $pagina . '">' . $pagina . '</a></li>';
+                }
+            }
+    
+            
+            if ($pagina_actual == $total_paginas) {
+                echo '<li class="page-item active"><span class="page-link">Fin</span></li>';
+            } else {
+                echo '<li class="page-item"><a class="page-link" href="?page=' . $total_paginas . '">Fin</a></li>';
+            }
+    
+            
+            if ($pagina_actual < $total_paginas) {
+                echo '<li class="page-item"><a class="page-link" href="?page=' . $pagina_siguiente . '">></a></li>';
+                echo '<li class="page-item"><a class="page-link" href="?page=' . $total_paginas . '">>></a></li>';
+            } else {
+                echo '<li class="page-item disabled"><span class="page-link">></span></li>';
+                echo '<li class="page-item disabled"><span class="page-link">>></span></li>';
+            }
+    
+            echo '</ul>';
+            echo '</nav>';
         } else {
-            echo '<a href="?page=' . $total_paginas . '"> ‎ Fin ‎ </a> ';
+            echo '<div class="alert alert-warning" role="alert">No hay ningún trabajo con ese criterio de búsqueda</div>';
         }
-
-        if ($pagina_actual < $total_paginas) {
-            echo '<a href="?page=' . $pagina_siguiente . '"> -> </a> ';
-            echo '<a href="?page=' . $total_paginas . '"> ‎ >> </a> ';
-        } else {
-            echo '<span>-></span> ';
-            echo '<span> >> </span> ';
-        }
-
-        echo '</div>';
-        }
-        else {
-            echo "No hay ningún trabajo con ese criterio de búsqueda";
-        }
-
     }
+    
 
     public function getCurrentPage()
     {

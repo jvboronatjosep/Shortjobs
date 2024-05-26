@@ -16,7 +16,7 @@ try {
 
 
     
-    $mail->isSMTP();
+$mail->isSMTP();
 $mail->Host = 'sandbox.smtp.mailtrap.io';
 $mail->SMTPAuth = true;
 $mail->Port = 2525;
@@ -25,12 +25,12 @@ $mail->Password = 'cdae7b0e045b02';//TCP port to connect to; use 587 if you have
 
     //Recipients
     //$mail->setFrom('jvboronatdavid@gmail.com', 'Mailer');
-    $mail->addAddress('jvboronat@gmail.com');     //Add a recipient
+    $mail->addAddress('jvboronat@gmail.com');//Add a recipient
                 //Name is optional
 
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(true);//Set email format to HTML
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     

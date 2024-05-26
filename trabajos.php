@@ -74,7 +74,6 @@ $order = $gestion->getCurrentOrder();
             <div class="col-md-8 col-lg-6">
                 <form action="trabajos.php" method="GET" class="d-flex">
                     <input type="text" name="query" class="form-control me-2" value="<?php echo $filtro?>" placeholder="Buscar trabajos...">
-
                     <button type="submit" class="btn btn-primary me-2">Buscar</button>
                 </form>
             </div>
